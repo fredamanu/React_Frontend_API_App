@@ -3,6 +3,7 @@ ul {
   margin: 0;
   padding: 0;
 }
+
 li {
   margin-bottom: 5px;
 }
@@ -14,9 +15,4 @@ a {
 
 a:hover {
   color: red;
-}
-
-.loadingIcon {
-  width: 20%;
-  margin: 300px auto;
 }

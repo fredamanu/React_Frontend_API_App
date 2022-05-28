@@ -1,9 +1,9 @@
 import * as React from "react"
 import Paper from "@mui/material/Paper"
 import Table from "@mui/material/Table"
-
 import TableContainer from "@mui/material/TableContainer"
 import TablePagination from "@mui/material/TablePagination"
+
 import THead from "./THead"
 import Tbody from "./Tbody"
 import "./mytable.css"
@@ -20,7 +20,6 @@ const columns = [
     label: "Population",
     minWidth: 170,
     align: "left",
-    format: (value) => value.toLocaleString("en-US"),
   },
   {
     id: "region",

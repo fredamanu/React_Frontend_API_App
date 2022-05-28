@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function useCountries(url) {
   const [data, setData] = useState(null)
@@ -10,8 +10,6 @@ export default function useCountries(url) {
       .then((data) => setData(data))
       .catch((err) => setError(err))
   }, [url])
-
-  if (error) return <p>Error!!</p>
 
   return { data, error }
 }

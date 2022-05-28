@@ -1,15 +1,21 @@
 import React from "react"
-import CountryCard from "../components/CountryCard"
-import useCountry from "../custom-hooks/useCountry"
+import CardBody from "../components/card/cardbody"
+import { useParams } from "react-router-dom"
+import useCountries from "../custom-hooks/useCountries.js"
+import LoadingIcon from "../components/loadingIcon/LoadingIcon"
 
 export default function CountryPage() {
-  const { country, error } = useCountry("Ghana")
+  let slug = useParams()
+  const selectedCountry = slug.id
+  const url = `https://restcountries.com/v3.1/name/${selectedCountry}?fullText=true`
+  const { data, error } = useCountries(url)
+  if (error) <h4>Opps!! Please Refresh Page</h4>
   return (
     <div>
-      {country ? (
-        <CountryCard country={country} error={error} />
+      {data ? (
+        <CardBody selectedCountry={selectedCountry} data={data} error={error} />
       ) : (
-        <p>Loading...</p>
+        <LoadingIcon />
       )}
     </div>
   )

@@ -7,7 +7,7 @@ import SearchIcon from "@mui/icons-material/Search"
 
 import "./searchbar.css"
 
-export default function Filter({ handleSearch }) {
+export default function SearchBar({ handleSearch }) {
   return (
     <Paper
       className="filter-container"
