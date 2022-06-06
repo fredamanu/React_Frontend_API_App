@@ -1,0 +1,24 @@
+.globe-container {
+  margin: 3rem auto 5rem;
+  text-align: center;
+}
+
+#africa,
+#asia,
+#europe,
+#south-america,
+#north-america,
+#australia {
+  animation: slideIn 10s infinite ease-in-out;
+  opacity: 0;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

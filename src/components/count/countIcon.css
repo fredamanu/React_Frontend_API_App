@@ -1,0 +1,12 @@
+.countIcon {
+  align-self: center;
+}
+
+.badge {
+  color: red;
+}
+
+.fav-icon-main {
+  color: whitesmoke;
+  cursor: pointer;
+}

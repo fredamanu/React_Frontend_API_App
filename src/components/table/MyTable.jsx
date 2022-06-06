@@ -33,9 +33,15 @@ const columns = [
     minWidth: 170,
     align: "left",
   },
+  {
+    id: "add",
+    label: "",
+    minWidth: 170,
+    align: "left",
+  },
 ]
 
-export default function MyTable({ data, error }) {
+export default function MyTable({ data }) {
   const [page, setPage] = React.useState(0)
   const [rowsPerPage, setRowsPerPage] = React.useState(10)
 
@@ -49,16 +55,18 @@ export default function MyTable({ data, error }) {
   }
 
   return (
-    <Paper sx={{ width: "100%", overflow: "hidden" }}>
-      <TableContainer sx={{ maxHeight: 600 }}>
+    <Paper
+      className="main-table"
+      elevation={0}
+      sx={{
+        width: "90%",
+        overflow: "hidden",
+      }}
+    >
+      <TableContainer sx={{ maxHeight: 450 }}>
         <Table stickyHeader aria-label="sticky table">
           <THead columns={columns} />
-          <Tbody
-            data={data}
-            error={error}
-            page={page}
-            rowsPerPage={rowsPerPage}
-          />
+          <Tbody data={data} page={page} rowsPerPage={rowsPerPage} />
         </Table>
       </TableContainer>
       <TablePagination

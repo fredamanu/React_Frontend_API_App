@@ -1,4 +1,10 @@
 .filter-container {
   width: 30%;
   margin: 20px auto;
+  align-self: center;
+  color: #fff;
+}
+
+.text-field {
+  color: #fff;
 }

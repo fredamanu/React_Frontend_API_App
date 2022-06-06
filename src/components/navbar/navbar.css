@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+.navbar-container {
+  display: flex;
+  padding: 5px 20px;
+  background-color: #371b58;
+}
+
+.logo {
+  align-self: center;
+  color: #fff;
+  font-family: "lobster";
+  font-weight: bold;
+}
+
+.input-field {
+  align-self: center;
+}
+
+.home-icon {
+  align-self: center;
+  color: whitesmoke;
+  margin-right: 20px;
+  cursor: pointer;
+}

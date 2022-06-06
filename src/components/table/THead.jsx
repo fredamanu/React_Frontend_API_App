@@ -6,7 +6,7 @@ import TableCell from "@mui/material/TableCell"
 export default function THead({ columns }) {
   return (
     <TableHead>
-      <TableRow>
+      <TableRow sx={{ backgroundColor: "red" }}>
         {columns.map((column) => (
           <TableCell
             key={column.id}

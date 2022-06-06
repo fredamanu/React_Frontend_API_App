@@ -1,29 +1,41 @@
+import React, { useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux"
+
+import Footer from "../components/footer/Footer"
 import LoadingIcon from "../components/loadingIcon/LoadingIcon"
 import MyTable from "../components/table/MyTable.jsx"
-import useCountries from "../custom-hooks/useCountries.js"
-import React, { useState } from "react"
-
-import SearchBar from "../components/searchbar/SeachBar"
+import NavBar from "../components/navbar/NavBar"
+import { fetchCountries } from "../redux/actions/fetchCountries"
 
 export default function HomePage() {
-  const [keyword, setKeyword] = useState("")
-  const { data, error } = useCountries("https://restcountries.com/v3.1/all")
-  const filterCountry = data?.filter((country) => {
-    return country.name.common.toLowerCase().includes(keyword)
+  const dispatch = useDispatch()
+  const state = useSelector((state) => state)
+  const loading = state.fetchCountriesReducer.loading
+  const error = state.fetchCountriesReducer.error
+  const keyword = state.searchTermReducer.keywordOne
+  const countries = state.fetchCountriesReducer.countries
+
+  const filterCountries = countries?.filter((country) => {
+    return country.name.common.toLowerCase().includes(keyword.toLowerCase())
   })
-  if (error) return <p>Opps!! Please Refresh Page</p>
-  const handleSearch = (e) => {
-    setKeyword(e.target.value)
-  }
+
+  useEffect(() => {
+    dispatch(fetchCountries())
+  }, [dispatch])
+
+  if (error) return <h4>OOps!! An Error Occured</h4>
+
   return (
     <div>
-      {data ? (
-        <div>
-          <SearchBar handleSearch={handleSearch} />
-          <MyTable data={filterCountry} error={error} />
-        </div>
-      ) : (
+      <NavBar />
+
+      {loading ? (
         <LoadingIcon />
+      ) : (
+        <div>
+          <MyTable data={filterCountries} />
+          <Footer />
+        </div>
       )}
     </div>
   )

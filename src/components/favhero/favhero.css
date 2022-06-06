@@ -1,0 +1,20 @@
+.fav-hero-container {
+  background-color: #612897;
+  padding: 10px 20px;
+  margin: 60px auto 10px;
+  height: 7rem;
+  width: 680px;
+}
+
+.fav-hero-text {
+  color: #fff;
+}
+
+.flex-container {
+  display: flex;
+  color: #fff;
+}
+
+.note {
+  margin-left: 10px;
+}

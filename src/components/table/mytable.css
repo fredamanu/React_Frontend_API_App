@@ -1,3 +1,7 @@
+.main-table {
+  margin: 0 auto;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -15,4 +19,22 @@ a {
 
 a:hover {
   color: red;
+}
+
+.favIcon {
+  margin: 0 auto;
+}
+
+.favIcon {
+  color: #354259;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  padding: 8px;
+  font-size: 50px;
+}
+
+.favIcon:hover {
+  background-color: white;
+  color: #7d1e6a;
 }

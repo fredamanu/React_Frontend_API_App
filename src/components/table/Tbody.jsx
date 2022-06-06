@@ -2,12 +2,30 @@ import TableBody from "@mui/material/TableBody"
 import TableCell from "@mui/material/TableCell"
 import TableRow from "@mui/material/TableRow"
 import { Link } from "react-router-dom"
+import FavoriteSharpIcon from "@mui/icons-material/FavoriteSharp"
+import { useDispatch } from "react-redux"
 
+import { addFavoriteCountry } from "../../redux/actions/favoriteCountries"
 import "./mytable.css"
 
-export default function Tbody({ data, error, page, rowsPerPage }) {
+export default function Tbody({ data, page, rowsPerPage }) {
   const style = {
     align: "left",
+  }
+
+  const dispatch = useDispatch()
+
+  const handleCountClick = (row) => {
+    const newName =
+      row.name.common.length > 15
+        ? row.name.common.slice(0, 15) + "..."
+        : row.name.common
+    const obj = {
+      name: newName,
+      fullname: row.name.common,
+      flag: row.flags.png,
+    }
+    dispatch(addFavoriteCountry(obj))
   }
 
   return (
@@ -37,6 +55,13 @@ export default function Tbody({ data, error, page, rowsPerPage }) {
                     )
                   })}
                 </ul>
+              </TableCell>
+              <TableCell>
+                <FavoriteSharpIcon
+                  className="favIcon"
+                  sx={{ fontSize: 40 }}
+                  onClick={() => handleCountClick(row)}
+                />
               </TableCell>
             </TableRow>
           )

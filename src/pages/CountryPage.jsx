@@ -1,22 +1,32 @@
-import React from "react"
-import CardBody from "../components/card/cardbody"
+import React, { useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
-import useCountries from "../custom-hooks/useCountries.js"
+
+import CardBody from "../components/card/Card"
+import Footer from "../components/footer/Footer"
 import LoadingIcon from "../components/loadingIcon/LoadingIcon"
+import NavBar from "../components/navbar/NavBar"
+import { fetchCountry } from "../redux/actions/fetchCountry"
 
 export default function CountryPage() {
+  const state = useSelector((state) => state)
+  const loading = state.fetchCountryReducer.loading
+  const error = state.fetchCountryReducer.error
+  const dispatch = useDispatch()
   let slug = useParams()
   const selectedCountry = slug.id
-  const url = `https://restcountries.com/v3.1/name/${selectedCountry}?fullText=true`
-  const { data, error } = useCountries(url)
-  if (error) <h4>Opps!! Please Refresh Page</h4>
+
+  useEffect(() => {
+    dispatch(fetchCountry(selectedCountry))
+  }, [selectedCountry, dispatch])
+
+  if (error) return <h4>Oops!! An Error Occurred</h4>
+
   return (
     <div>
-      {data ? (
-        <CardBody selectedCountry={selectedCountry} data={data} error={error} />
-      ) : (
-        <LoadingIcon />
-      )}
+      <NavBar />
+      {loading ? <LoadingIcon /> : <CardBody />}
+      <Footer />
     </div>
   )
 }
