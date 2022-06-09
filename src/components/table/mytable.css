@@ -1,5 +1,6 @@
 .main-table {
-  margin: 0 auto;
+  margin: 50px auto;
+  padding: 0 100px;
 }
 
 ul {
@@ -12,17 +13,20 @@ li {
   margin-bottom: 5px;
 }
 
-a {
+.a-dark {
   text-decoration: none;
-  color: black;
+  color: rgb(206, 204, 204);
 }
-
-a:hover {
+.a-dark:hover {
   color: red;
 }
+.a-light {
+  text-decoration: none;
+  color: inherit;
+}
 
-.favIcon {
-  margin: 0 auto;
+.a-light:hover {
+  color: red;
 }
 
 .favIcon {
@@ -32,6 +36,20 @@ a:hover {
   background-color: whitesmoke;
   padding: 8px;
   font-size: 50px;
+}
+
+.favIcon-dark {
+  color: rgb(206, 204, 204);
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #2c272e;
+  padding: 8px;
+  font-size: 50px;
+}
+
+.favIcon-dark:hover {
+  background-color: rgb(206, 204, 204);
+  color: #7d1e6a;
 }
 
 .favIcon:hover {

@@ -7,12 +7,15 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "./index.css"
 import App from "./App"
 import store from "./redux/store"
+import ThemeProvider from "./ThemeContext"
 
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
       <Router>
-        <App />
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
       </Router>
     </React.StrictMode>
   </Provider>,

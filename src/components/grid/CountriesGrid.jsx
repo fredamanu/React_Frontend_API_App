@@ -5,6 +5,7 @@ import Grid from "@mui/material/Grid"
 import AddIcon from "@mui/icons-material/Add"
 
 import { addFavoriteCountry } from "../../redux/actions/favoriteCountries"
+import { getSelectedCountry } from "../../redux/actions/getSelectedCountry"
 import "./grid.css"
 
 export default function CountriesGrid() {
@@ -30,6 +31,10 @@ export default function CountriesGrid() {
     dispatch(addFavoriteCountry(obj))
   }
 
+  const handleGetSelectedCountry = (name) => {
+    dispatch(getSelectedCountry(name))
+  }
+
   return (
     <div className=" favs-container">
       <Grid
@@ -53,7 +58,12 @@ export default function CountriesGrid() {
               </div>
               <div className="flag-name-container">
                 <div className="flag-container">
-                  <Link to={{ pathname: `/country/${item.name.common}` }}>
+                  <Link
+                    to={{ pathname: `/country/${item.name.common}` }}
+                    onClick={() => {
+                      handleGetSelectedCountry(item.name.common)
+                    }}
+                  >
                     <img className="flag" src={item.flags.png} alt="pic" />
                   </Link>
                 </div>

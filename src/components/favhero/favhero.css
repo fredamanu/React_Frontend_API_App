@@ -1,5 +1,13 @@
 .fav-hero-container {
-  background-color: #612897;
+  background-color: #fad4d4;
+  padding: 10px 20px;
+  margin: 60px auto 10px;
+  height: 7rem;
+  width: 680px;
+}
+
+.fav-hero-container-dark {
+  background-color: #0f0e0e;
   padding: 10px 20px;
   margin: 60px auto 10px;
   height: 7rem;
@@ -9,8 +17,16 @@
 .fav-hero-text {
   color: #fff;
 }
+.fav-hero-text-dark {
+  color: rgb(222, 217, 217);
+}
 
 .flex-container {
+  display: flex;
+  color: #fff;
+}
+
+.flex-container-dark {
   display: flex;
   color: #fff;
 }

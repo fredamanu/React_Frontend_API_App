@@ -6,9 +6,11 @@ import IconButton from "@mui/material/IconButton"
 import SearchIcon from "@mui/icons-material/Search"
 
 import { setSearchTermOne } from "../../redux/actions/searchTerm"
+import { ThemeContext } from "../../ThemeContext"
 import "./searchbar.css"
 
 export default function SearchBar() {
+  const { dark } = React.useContext(ThemeContext)
   const dispatch = useDispatch()
 
   const handleSearch = (e) => {
@@ -25,7 +27,7 @@ export default function SearchBar() {
         alignItems: "center",
         width: 600,
         borderRadius: 10,
-        backgroundColor: "#5B4B8A",
+        backgroundColor: dark ? "#413F42" : "#F47C7C",
         color: "white",
       }}
     >

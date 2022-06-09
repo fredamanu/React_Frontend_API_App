@@ -1,12 +1,16 @@
 import * as React from "react"
+import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import Grid from "@mui/material/Grid"
 import ClearIcon from "@mui/icons-material/Clear"
 
 import { removeFavoriteCountry } from "../../redux/actions/favoriteCountries"
+import { getSelectedCountry } from "../../redux/actions/getSelectedCountry"
 import "./grid.css"
+import { ThemeContext } from "../../ThemeContext"
 
 export default function FavoriteGrid() {
+  const { dark } = React.useContext(ThemeContext)
   const state = useSelector((state) => state)
   const dispatch = useDispatch()
   const list = state.favoriteCountriesReducer.favoriteCountries
@@ -20,6 +24,10 @@ export default function FavoriteGrid() {
     dispatch(removeFavoriteCountry(obj))
   }
 
+  const handleGetSelectedCountry = (name) => {
+    dispatch(getSelectedCountry(name))
+  }
+
   return (
     <div className=" favs-container">
       <Grid
@@ -31,7 +39,11 @@ export default function FavoriteGrid() {
       >
         {list.map((item) => (
           <Grid key={item.name} item>
-            <div className="grid-item-container">
+            <div
+              className={
+                dark ? "grid-item-container-dark" : "grid-item-container"
+              }
+            >
               <div className="icon-container">
                 <ClearIcon
                   sx={{ fontSize: 30 }}
@@ -43,9 +55,16 @@ export default function FavoriteGrid() {
               </div>
               <div className="flag-name-container">
                 <div className="flag-container">
-                  <img className="flag" src={item.flag} alt="pic" />
+                  <Link
+                    to={{ pathname: `/country/${item.fullname}` }}
+                    onClick={() => {
+                      handleGetSelectedCountry(item.fullname)
+                    }}
+                  >
+                    <img className="flag" src={item.flag} alt="pic" />
+                  </Link>
                 </div>
-                <p className="name">{item.name}</p>
+                <p className={dark ? "name-dark" : "name"}>{item.name}</p>
               </div>
             </div>
           </Grid>

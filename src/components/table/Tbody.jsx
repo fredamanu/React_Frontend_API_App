@@ -7,14 +7,13 @@ import { useDispatch } from "react-redux"
 
 import { addFavoriteCountry } from "../../redux/actions/favoriteCountries"
 import "./mytable.css"
+import { getSelectedCountry } from "../../redux/actions/getSelectedCountry"
 
-export default function Tbody({ data, page, rowsPerPage }) {
+export default function Tbody({ data, page, rowsPerPage, dark }) {
+  const dispatch = useDispatch()
   const style = {
     align: "left",
   }
-
-  const dispatch = useDispatch()
-
   const handleCountClick = (row) => {
     const newName =
       row.name.common.length > 15
@@ -28,6 +27,10 @@ export default function Tbody({ data, page, rowsPerPage }) {
     dispatch(addFavoriteCountry(obj))
   }
 
+  const handleGetSelectedCountry = (name) => {
+    dispatch(getSelectedCountry(name))
+  }
+
   return (
     <TableBody>
       {data
@@ -37,28 +40,47 @@ export default function Tbody({ data, page, rowsPerPage }) {
             <TableRow hover role="checkbox" tabIndex={-1} key={row.name.common}>
               <TableCell sx={{ fontSize: 100 }}>{row.flag}</TableCell>
               <TableCell align={style.align}>
-                <Link to={{ pathname: `/country/${row.name.common}` }}>
+                <Link
+                  className={dark ? "a-dark" : "a-light"}
+                  to={{ pathname: `/country/${row.name.common}` }}
+                  onClick={() => {
+                    handleGetSelectedCountry(row.name.common)
+                  }}
+                >
                   {row.name.common}
                 </Link>
               </TableCell>
-              <TableCell align={style.align}>
+              <TableCell
+                align={style.align}
+                sx={{ color: dark ? "rgb(206, 204, 204)" : "inherit" }}
+              >
                 {row.population.toLocaleString("en-US")}
               </TableCell>
-              <TableCell align={style.align}>{row.region}</TableCell>
-              <TableCell align={style.align}>
+              <TableCell
+                align={style.align}
+                sx={{ color: dark ? "rgb(206, 204, 204)" : "inherit" }}
+              >
+                {row.region}
+              </TableCell>
+              <TableCell
+                align={style.align}
+                sx={{ color: dark ? "rgb(206, 204, 204)" : "inherit" }}
+              >
                 <ul>
-                  {Object.values(row.languages).map((lang) => {
-                    return (
-                      <li key={lang} align={style.align}>
-                        {lang}
-                      </li>
-                    )
-                  })}
+                  {row.languages
+                    ? Object.values(row.languages).map((lang) => {
+                        return (
+                          <li key={lang} align={style.align}>
+                            {lang}
+                          </li>
+                        )
+                      })
+                    : ""}
                 </ul>
               </TableCell>
               <TableCell>
                 <FavoriteSharpIcon
-                  className="favIcon"
+                  className={dark ? "favIcon-dark" : "favIcon"}
                   sx={{ fontSize: 40 }}
                   onClick={() => handleCountClick(row)}
                 />

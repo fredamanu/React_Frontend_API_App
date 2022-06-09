@@ -1,24 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 .navbar-container {
   display: flex;
-  padding: 5px 20px;
-  background-color: #371b58;
+  padding: 5px 50px;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/002/176/558/non_2x/red-panoramic-studio-background-with-white-glow-vector.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.navbar-container-dark {
+  display: flex;
+  padding: 5px 50px;
+  background-color: #0f0e0e;
 }
 
 .logo {
   align-self: center;
-  color: #fff;
+  margin-top: 10px;
+  color: rgb(206, 204, 204);
   font-family: "lobster";
   font-weight: bold;
 }
 
-.input-field {
-  align-self: center;
-}
-
 .home-icon {
   align-self: center;
-  color: whitesmoke;
+  color: rgb(206, 204, 204);
   margin-right: 20px;
   cursor: pointer;
 }

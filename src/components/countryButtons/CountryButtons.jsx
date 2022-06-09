@@ -5,7 +5,10 @@ import Button from "@mui/material/Button"
 import Stack from "@mui/material/Stack"
 import MapIcon from "@mui/icons-material/Map"
 
-import { addFavoriteCountry } from "../../redux/actions/favoriteCountries"
+import {
+  addFavoriteCountry,
+  removeFavoriteCountry,
+} from "../../redux/actions/favoriteCountries"
 import "./button.css"
 
 export default function CountryButtons() {
@@ -13,6 +16,14 @@ export default function CountryButtons() {
   const navigate = useNavigate()
   const state = useSelector((state) => state)
   const country = state.fetchCountryReducer.country
+  const selectedCountry = state.getSelectedCountryReducer.selectedCountry
+  const favoriteCountries = state.favoriteCountriesReducer.favoriteCountries
+
+  const isDuplicate = favoriteCountries.some((obj) => {
+    return obj.fullname === selectedCountry
+  })
+
+  console.log(isDuplicate)
 
   const handleClick = () => {
     const newObj = country[0]
@@ -25,7 +36,9 @@ export default function CountryButtons() {
       fullname: newObj.name.common,
       flag: newObj.flags.png,
     }
-    dispatch(addFavoriteCountry(obj))
+    isDuplicate
+      ? dispatch(removeFavoriteCountry(obj))
+      : dispatch(addFavoriteCountry(obj))
 
     navigate("/favoritecountries")
   }
@@ -41,7 +54,7 @@ export default function CountryButtons() {
           return c.flag
         })}
       >
-        Add
+        {isDuplicate ? "REMOVE" : "ADD"}
       </Button>
       <Button
         className="button"

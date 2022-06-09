@@ -1,5 +1,4 @@
 import * as React from "react"
-import Paper from "@mui/material/Paper"
 import Table from "@mui/material/Table"
 import TableContainer from "@mui/material/TableContainer"
 import TablePagination from "@mui/material/TablePagination"
@@ -7,6 +6,7 @@ import TablePagination from "@mui/material/TablePagination"
 import THead from "./THead"
 import Tbody from "./Tbody"
 import "./mytable.css"
+import { ThemeContext } from "../../ThemeContext"
 
 const columns = [
   {
@@ -35,13 +35,14 @@ const columns = [
   },
   {
     id: "add",
-    label: "",
-    minWidth: 170,
+    label: "Add",
+    minWidth: 100,
     align: "left",
   },
 ]
 
 export default function MyTable({ data }) {
+  const { dark } = React.useContext(ThemeContext)
   const [page, setPage] = React.useState(0)
   const [rowsPerPage, setRowsPerPage] = React.useState(10)
 
@@ -55,18 +56,23 @@ export default function MyTable({ data }) {
   }
 
   return (
-    <Paper
+    <div
       className="main-table"
-      elevation={0}
-      sx={{
-        width: "90%",
+      style={{
+        width: "100%",
         overflow: "hidden",
+        backgroundColor: dark ? "#212121" : "#FFF2F2",
       }}
     >
       <TableContainer sx={{ maxHeight: 450 }}>
         <Table stickyHeader aria-label="sticky table">
-          <THead columns={columns} />
-          <Tbody data={data} page={page} rowsPerPage={rowsPerPage} />
+          <THead columns={columns} dark={dark} />
+          <Tbody
+            dark={dark}
+            data={data}
+            page={page}
+            rowsPerPage={rowsPerPage}
+          />
         </Table>
       </TableContainer>
       <TablePagination
@@ -77,7 +83,8 @@ export default function MyTable({ data }) {
         page={page}
         onPageChange={handleChangePage}
         onRowsPerPageChange={handleChangeRowsPerPage}
+        style={{ color: dark ? "#fff" : "inherit" }}
       />
-    </Paper>
+    </div>
   )
 }

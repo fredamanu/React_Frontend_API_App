@@ -14,6 +14,7 @@ export const favoriteCountriesReducer = (state = initialState, action) => {
       if (isDuplicate) {
         return state
       }
+
       const favoriteCountry = action.payload
       const newFavoriteCountry = [favoriteCountry, ...state.favoriteCountries]
       return {
@@ -26,7 +27,7 @@ export const favoriteCountriesReducer = (state = initialState, action) => {
       const newFavCountry = state.favoriteCountries.filter((country) => {
         return country.fullname !== action.payload.fullname
       })
-      console.log(newFavCountry)
+
       return {
         ...state,
         favoriteCountries: newFavCountry,

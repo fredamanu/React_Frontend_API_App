@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useContext, useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 
 import Footer from "../components/footer/Footer"
@@ -6,8 +6,10 @@ import LoadingIcon from "../components/loadingIcon/LoadingIcon"
 import MyTable from "../components/table/MyTable.jsx"
 import NavBar from "../components/navbar/NavBar"
 import { fetchCountries } from "../redux/actions/fetchCountries"
+import { ThemeContext } from "../ThemeContext"
 
 export default function HomePage() {
+  const { dark } = useContext(ThemeContext)
   const dispatch = useDispatch()
   const state = useSelector((state) => state)
   const loading = state.fetchCountriesReducer.loading
@@ -26,17 +28,16 @@ export default function HomePage() {
   if (error) return <h4>OOps!! An Error Occured</h4>
 
   return (
-    <div>
+    <div style={{ backgroundColor: dark ? "#212121" : "#fff" }}>
       <NavBar />
-
       {loading ? (
         <LoadingIcon />
       ) : (
-        <div>
+        <div style={{ backgroundColor: dark ? "#212121" : "#fff" }}>
           <MyTable data={filterCountries} />
-          <Footer />
         </div>
       )}
+      <Footer />
     </div>
   )
 }

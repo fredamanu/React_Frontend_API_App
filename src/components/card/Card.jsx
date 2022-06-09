@@ -24,7 +24,7 @@ export default function CardBody() {
           <hr />
           <p>
             Want to know more? Click on the button below to find it on google
-            maps or click on the other button to go back to homepage.
+            maps or click add button to add to your favorites.
           </p>
           <hr />
           <CountryButtons />
