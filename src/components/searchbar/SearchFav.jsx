@@ -5,8 +5,8 @@ import InputBase from "@mui/material/InputBase"
 
 import PopOver from "../popover/PopOver"
 import { setSearchTermTwo } from "../../redux/actions/searchTerm"
-import "./searchbar.css"
 import { ThemeContext } from "../../ThemeContext"
+import "./searchbar.css"
 
 export default function SearchFav() {
   const dispatch = useDispatch()
@@ -24,7 +24,7 @@ export default function SearchFav() {
         p: "0px 1px",
         display: "flex",
         alignItems: "center",
-        width: 400,
+        width: 700,
         backgroundColor: dark ? "#413F42" : "#fff",
         color: "#fff",
       }}

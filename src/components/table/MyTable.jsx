@@ -5,8 +5,8 @@ import TablePagination from "@mui/material/TablePagination"
 
 import THead from "./THead"
 import Tbody from "./Tbody"
-import "./mytable.css"
 import { ThemeContext } from "../../ThemeContext"
+import "./mytable.css"
 
 const columns = [
   {
@@ -59,7 +59,7 @@ export default function MyTable({ data }) {
     <div
       className="main-table"
       style={{
-        width: "100%",
+        width: "70%",
         overflow: "hidden",
         backgroundColor: dark ? "#212121" : "#FFF2F2",
       }}

@@ -1,13 +1,13 @@
+import { Link } from "react-router-dom"
+import { useDispatch } from "react-redux"
 import TableBody from "@mui/material/TableBody"
 import TableCell from "@mui/material/TableCell"
 import TableRow from "@mui/material/TableRow"
-import { Link } from "react-router-dom"
 import FavoriteSharpIcon from "@mui/icons-material/FavoriteSharp"
-import { useDispatch } from "react-redux"
 
 import { addFavoriteCountry } from "../../redux/actions/favoriteCountries"
-import "./mytable.css"
 import { getSelectedCountry } from "../../redux/actions/getSelectedCountry"
+import "./mytable.css"
 
 export default function Tbody({ data, page, rowsPerPage, dark }) {
   const dispatch = useDispatch()

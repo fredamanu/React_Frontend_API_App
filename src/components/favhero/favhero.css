@@ -1,17 +1,17 @@
 .fav-hero-container {
   background-color: #fad4d4;
   padding: 10px 20px;
-  margin: 60px auto 10px;
+  margin: 60px auto;
   height: 7rem;
-  width: 680px;
+  width: 1000px;
 }
 
 .fav-hero-container-dark {
   background-color: #0f0e0e;
   padding: 10px 20px;
-  margin: 60px auto 10px;
+  margin: 60px auto;
   height: 7rem;
-  width: 680px;
+  width: 1000px;
 }
 
 .fav-hero-text {

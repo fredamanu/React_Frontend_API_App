@@ -25,15 +25,14 @@ export default function SearchBar() {
         p: "2px 4px",
         display: "flex",
         alignItems: "center",
-        width: 600,
-        borderRadius: 10,
-        backgroundColor: dark ? "#413F42" : "#F47C7C",
+        width: 780,
+        backgroundColor: dark ? "#413F42" : "#EEEEEE",
         color: "white",
       }}
     >
       <InputBase
         className="text-field"
-        sx={{ ml: 5, flex: 1, color: "white" }}
+        sx={{ ml: 5, flex: 1, color: "black" }}
         placeholder="Filter Search"
         inputProps={{ "aria-label": "search for a country" }}
         onChange={handleSearch}

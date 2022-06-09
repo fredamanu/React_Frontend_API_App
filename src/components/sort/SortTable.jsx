@@ -5,12 +5,12 @@ import MenuItem from "@mui/material/MenuItem"
 import FormControl from "@mui/material/FormControl"
 import Select from "@mui/material/Select"
 
-import "./sort.css"
 import {
   sortCountriesByName,
   sortCountriesByPopulation,
   sortCountriesByRegion,
 } from "../../redux/actions/sortCountries"
+import "./sort.css"
 
 export default function SortTable() {
   const dispatch = useDispatch()

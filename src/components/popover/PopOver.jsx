@@ -4,7 +4,6 @@ import IconButton from "@mui/material/IconButton"
 import SearchIcon from "@mui/icons-material/Search"
 
 import CountriesGrid from "../grid/CountriesGrid"
-import "./popover.css"
 
 export default function PopOver() {
   const [anchorEl, setAnchorEl] = React.useState(null)

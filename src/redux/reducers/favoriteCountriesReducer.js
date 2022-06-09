@@ -1,4 +1,5 @@
 import * as actions from "../actions/types"
+import { toast } from "react-toastify"
 
 const initialState = {
   favoriteCountries: [],
@@ -12,11 +13,17 @@ export const favoriteCountriesReducer = (state = initialState, action) => {
         return obj.name === action.payload.name
       })
       if (isDuplicate) {
+        toast.info(`${action.payload.name} already in list`, {
+          position: "bottom-left",
+        })
         return state
       }
 
       const favoriteCountry = action.payload
       const newFavoriteCountry = [favoriteCountry, ...state.favoriteCountries]
+      toast.success(`${favoriteCountry.name} added to list`, {
+        position: "bottom-left",
+      })
       return {
         ...state,
         favoriteCountries: newFavoriteCountry,
@@ -27,7 +34,9 @@ export const favoriteCountriesReducer = (state = initialState, action) => {
       const newFavCountry = state.favoriteCountries.filter((country) => {
         return country.fullname !== action.payload.fullname
       })
-
+      toast.warning(`${action.payload.name} removed from list`, {
+        position: "bottom-left",
+      })
       return {
         ...state,
         favoriteCountries: newFavCountry,

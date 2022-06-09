@@ -2,6 +2,8 @@ import { Routes, Route } from "react-router-dom"
 import HomePage from "./pages/HomePage"
 import CountryPage from "./pages/CountryPage"
 import FavoriteCountries from "./pages/FavoriteCountries"
+import "react-toastify/dist/ReactToastify.css"
+
 import "./App.css"
 
 function App() {

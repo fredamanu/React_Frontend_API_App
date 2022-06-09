@@ -1,12 +1,13 @@
 .hero-container {
-  width: 100%;
+  width: 85%;
+  margin: 30px auto;
   height: 800px;
-  padding: 20px 0;
   text-align: center;
 }
 
 .hero {
   display: flex;
+  justify-content: space-between;
 }
 
 .text {

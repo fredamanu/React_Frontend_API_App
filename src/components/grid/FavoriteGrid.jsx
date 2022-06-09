@@ -6,8 +6,8 @@ import ClearIcon from "@mui/icons-material/Clear"
 
 import { removeFavoriteCountry } from "../../redux/actions/favoriteCountries"
 import { getSelectedCountry } from "../../redux/actions/getSelectedCountry"
-import "./grid.css"
 import { ThemeContext } from "../../ThemeContext"
+import "./grid.css"
 
 export default function FavoriteGrid() {
   const { dark } = React.useContext(ThemeContext)
@@ -35,7 +35,7 @@ export default function FavoriteGrid() {
         justifyContent="center"
         rowSpacing={0.2}
         columnSpacing={{ xs: 0.2, sm: 0.2, md: 0.2 }}
-        style={{ width: 800, margin: "auto" }}
+        style={{ width: 1000, marginLeft: 170 }}
       >
         {list.map((item) => (
           <Grid key={item.name} item>

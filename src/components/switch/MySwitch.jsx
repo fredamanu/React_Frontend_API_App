@@ -2,9 +2,9 @@ import * as React from "react"
 import FormGroup from "@mui/material/FormGroup"
 import FormControlLabel from "@mui/material/FormControlLabel"
 
-import "./myswitch.css"
 import { ThemeContext } from "../../ThemeContext"
 import { MaterialUISwitch } from "./MaterialUISwitch"
+import "./myswitch.css"
 
 export default function MySwitch() {
   const { dark, setDark } = React.useContext(ThemeContext)

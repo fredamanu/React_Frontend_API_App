@@ -23,8 +23,6 @@ export default function CountryButtons() {
     return obj.fullname === selectedCountry
   })
 
-  console.log(isDuplicate)
-
   const handleClick = () => {
     const newObj = country[0]
     const newName =

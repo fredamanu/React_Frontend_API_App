@@ -1,5 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom"
+import { ToastContainer } from "react-toastify"
 import { BrowserRouter as Router } from "react-router-dom"
 import { Provider } from "react-redux"
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -13,6 +14,7 @@ ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
       <Router>
+        <ToastContainer />
         <ThemeProvider>
           <App />
         </ThemeProvider>
