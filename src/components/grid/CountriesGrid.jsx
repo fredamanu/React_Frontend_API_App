@@ -6,9 +6,11 @@ import AddIcon from "@mui/icons-material/Add"
 
 import { addFavoriteCountry } from "../../redux/actions/favoriteCountries"
 import { getSelectedCountry } from "../../redux/actions/getSelectedCountry"
+import { ThemeContext } from "../../ThemeContext"
 import "./grid.css"
 
 export default function CountriesGrid() {
+  const { dark } = React.useContext(ThemeContext)
   const dispatch = useDispatch()
   const keyword = useSelector((state) => state.searchTermReducer.keywordTwo)
   const state = useSelector((state) => state)
@@ -42,11 +44,19 @@ export default function CountriesGrid() {
         justifyContent="center"
         rowSpacing={0.2}
         columnSpacing={{ xs: 0.2, sm: 0.2, md: 0.2 }}
-        style={{ width: 700, margin: "auto" }}
+        style={{
+          width: 665,
+          margin: "auto",
+          backgroundColor: dark ? "#354556" : "#f0f0f0",
+        }}
       >
         {newCountries.map((item) => (
-          <Grid key={item.name.common} item>
-            <div className="grid-item-container">
+          <Grid key={item.name.common} item sx={{ backgroundColor: "#fff" }}>
+            <div
+              className={
+                dark ? "grid-item-container-dark" : "grid-item-container"
+              }
+            >
               <div className="icon-container">
                 <AddIcon
                   sx={{ fontSize: 30 }}

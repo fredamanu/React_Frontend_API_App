@@ -14,6 +14,7 @@ export default function Tbody({ data, page, rowsPerPage, dark }) {
   const style = {
     align: "left",
   }
+
   const handleCountClick = (row) => {
     const newName =
       row.name.common.length > 15
@@ -52,19 +53,19 @@ export default function Tbody({ data, page, rowsPerPage, dark }) {
               </TableCell>
               <TableCell
                 align={style.align}
-                sx={{ color: dark ? "rgb(206, 204, 204)" : "inherit" }}
+                sx={{ color: dark ? "#fff" : "#inherit" }}
               >
                 {row.population.toLocaleString("en-US")}
               </TableCell>
               <TableCell
                 align={style.align}
-                sx={{ color: dark ? "rgb(206, 204, 204)" : "inherit" }}
+                sx={{ color: dark ? "#fff" : "inherit" }}
               >
                 {row.region}
               </TableCell>
               <TableCell
                 align={style.align}
-                sx={{ color: dark ? "rgb(206, 204, 204)" : "inherit" }}
+                sx={{ color: dark ? "#fff" : "inherit" }}
               >
                 <ul>
                   {row.languages

@@ -1,0 +1,24 @@
+.homehero-container {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #fff;
+  height: 600px;
+}
+.homehero-container-dark {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #435b71;
+  height: 600px;
+}
+
+.hero-heading {
+  color: black;
+  font-weight: 800;
+  margin: 0;
+}
+
+.hero-heading-dark {
+  color: #fff;
+  font-weight: 800;
+  margin: 0;
+}

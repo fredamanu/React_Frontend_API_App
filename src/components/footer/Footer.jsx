@@ -13,15 +13,19 @@ export default function Footer() {
   return (
     <div
       className="footer-container"
-      style={{ backgroundColor: dark ? "#0F0E0E" : "#FF5D5D" }}
+      style={{ backgroundColor: dark ? "#435b71" : "#fff" }}
     >
-      <p className="copyright-text">Copyright 2022 Count-Trees</p>
+      <p className={dark ? "copyright-text-dark" : "copyright-text"}>
+        Copyright 2022 Count-Trees
+      </p>
       <div className="social">
-        <GitHubIcon className="footer-icon" />
-        <TwitterIcon className="footer-icon" />
-        <FacebookOutlinedIcon className="footer-icon" />
+        <GitHubIcon className={dark ? "footer-icon-dark" : "footer-icon"} />
+        <TwitterIcon className={dark ? "footer-icon-dark" : "footer-icon"} />
+        <FacebookOutlinedIcon
+          className={dark ? "footer-icon-dark" : "footer-icon"}
+        />
         <a href="www.linkedin.com/in/freda-manu">
-          <LinkedInIcon className="footer-icon" />
+          <LinkedInIcon className={dark ? "footer-icon-dark" : "footer-icon"} />
         </a>
       </div>
     </div>

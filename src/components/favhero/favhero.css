@@ -1,29 +1,29 @@
 .fav-hero-container {
-  background-color: #fad4d4;
+  background-color: #f0f0f0;
   padding: 10px 20px;
   margin: 60px auto;
   height: 7rem;
-  width: 1000px;
+  width: 680px;
 }
 
 .fav-hero-container-dark {
-  background-color: #0f0e0e;
+  background-color: #354556;
   padding: 10px 20px;
   margin: 60px auto;
   height: 7rem;
-  width: 1000px;
+  width: 680px;
 }
 
 .fav-hero-text {
-  color: #fff;
+  color: #383838;
 }
 .fav-hero-text-dark {
-  color: rgb(222, 217, 217);
+  color: #fff;
 }
 
 .flex-container {
   display: flex;
-  color: #fff;
+  color: #383838;
 }
 
 .flex-container-dark {

@@ -1,6 +1,5 @@
 import * as React from "react"
 import { useDispatch } from "react-redux"
-import Paper from "@mui/material/Paper"
 import InputBase from "@mui/material/InputBase"
 import IconButton from "@mui/material/IconButton"
 import SearchIcon from "@mui/icons-material/Search"
@@ -18,28 +17,29 @@ export default function SearchBar() {
   }
 
   return (
-    <Paper
+    <div
       className="filter-container"
       component="form"
-      sx={{
+      style={{
         p: "2px 4px",
         display: "flex",
         alignItems: "center",
-        width: 780,
-        backgroundColor: dark ? "#413F42" : "#EEEEEE",
+        borderRadius: 10,
+        width: "80%",
+        backgroundColor: dark ? "#F9F9F9" : "#EEEEEE",
         color: "white",
       }}
     >
       <InputBase
         className="text-field"
         sx={{ ml: 5, flex: 1, color: "black" }}
-        placeholder="Filter Search"
+        placeholder="Search for a country by name"
         inputProps={{ "aria-label": "search for a country" }}
         onChange={handleSearch}
       />
       <IconButton sx={{ p: "10px", color: "#D1D1D1" }} aria-label="search">
         <SearchIcon />
       </IconButton>
-    </Paper>
+    </div>
   )
 }

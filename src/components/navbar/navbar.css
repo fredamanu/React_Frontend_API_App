@@ -1,49 +1,60 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-/* https://static.vecteezy.com/system/resources/previews/002/176/558/non_2x/red-panoramic-studio-background-with-white-glow-vector.jpg */
 .navbar-container {
-  /* padding: 5px 50px; */
-  background-image: url("https://cdn.xxl.thumbs.canstockphoto.com/red-abstract-background-red-abstract-irregular-triangle-pattern-background-drawing_csp20047298.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative;
+  height: 100px;
+  position: sticky;
+  top: 0px;
+  background-color: #fff;
+  z-index: 9999;
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-container-dark {
+  background-color: #435b71;
+  height: 100px;
+  position: sticky;
+  top: 0px;
+  z-index: 9999;
 }
 
 .children1 {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
-  padding: 5px 50px;
+  height: 100%;
+  padding: 5px 100px;
 }
 
 .sub-children1 {
   display: flex;
   justify-content: space-between;
-}
-
-.children2 {
-  border-top: 1px solid #ccc;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 5px 220px;
-}
-.navbar-container-dark {
-  background-color: #0f0e0e;
+  align-items: center;
 }
 
 .logo {
-  align-self: center;
   margin-top: 10px;
-  color: rgb(206, 204, 204);
+  color: black;
+  font-family: "lobster";
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.logo-dark {
+  margin-top: 10px;
+  color: #fff;
   font-family: "lobster";
   font-weight: bold;
   font-size: 2em;
 }
 
 .home-icon {
-  align-self: center;
-  color: rgb(206, 204, 204);
+  color: black;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.home-icon-dark {
+  color: #fff;
   margin-right: 30px;
   cursor: pointer;
 }

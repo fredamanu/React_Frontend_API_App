@@ -8,6 +8,11 @@
 }
 
 .fav-icon-main {
-  color: rgb(206, 204, 204);
+  color: black;
+  cursor: pointer;
+}
+
+.fav-icon-main-dark {
+  color: #fff;
   cursor: pointer;
 }

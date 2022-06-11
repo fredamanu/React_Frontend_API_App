@@ -1,5 +1,5 @@
 .main-table {
-  margin: 50px auto;
+  margin: 0 auto;
 }
 
 ul {
@@ -14,7 +14,7 @@ li {
 
 .a-dark {
   text-decoration: none;
-  color: rgb(206, 204, 204);
+  color: #fff;
 }
 .a-dark:hover {
   color: red;
@@ -32,7 +32,7 @@ li {
   color: #354259;
   cursor: pointer;
   border-radius: 50%;
-  background-color: whitesmoke;
+  background-color: #fff;
   padding: 8px;
   font-size: 50px;
 }
@@ -41,7 +41,6 @@ li {
   color: rgb(206, 204, 204);
   cursor: pointer;
   border-radius: 50%;
-  background-color: #2c272e;
   padding: 8px;
   font-size: 50px;
 }

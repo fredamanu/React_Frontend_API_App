@@ -1,5 +1,5 @@
 .footer-container {
-  padding: 0 30px;
+  padding: 0 100px;
   height: 4rem;
   margin-top: 50px;
   display: flex;
@@ -13,12 +13,25 @@
 
 .footer-icon {
   margin-right: 20px;
-  color: rgb(206, 204, 204);
+  color: black;
+  cursor: pointer;
+}
+
+.footer-icon-dark {
+  margin-right: 20px;
+  color: #fff;
   cursor: pointer;
 }
 
 .copyright-text {
-  color: rgb(206, 204, 204);
+  color: black;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.copyright-text-dark {
+  color: #fff;
   padding: 0;
   margin: 0;
   font-size: 0.9em;

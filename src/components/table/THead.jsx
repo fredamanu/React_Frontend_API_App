@@ -12,8 +12,8 @@ export default function THead({ columns, dark }) {
             align={column.align}
             style={{
               minWidth: column.minWidth,
-              backgroundColor: dark ? "#212121" : "#FFF2F2",
-              color: dark ? "rgb(206, 204, 204)" : "inherit",
+              backgroundColor: dark ? "#354556" : "#ccc",
+              color: dark ? "#fff" : "inherit",
               fontSize: 20,
             }}
           >

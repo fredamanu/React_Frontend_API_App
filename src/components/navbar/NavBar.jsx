@@ -2,7 +2,6 @@ import React, { useContext } from "react"
 import { useNavigate } from "react-router-dom"
 import { ThemeContext } from "../../ThemeContext"
 import "./navbar.css"
-import NavBarTwo from "./NavBarTwo"
 import NavBarOne from "./NavBarOne"
 
 export default function NavBar() {
@@ -16,7 +15,6 @@ export default function NavBar() {
   return (
     <div className={dark ? "navbar-container-dark" : "navbar-container"}>
       <NavBarOne handleClick={handleClick} />
-      <NavBarTwo />
     </div>
   )
 }

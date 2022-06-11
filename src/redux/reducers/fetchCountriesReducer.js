@@ -28,14 +28,25 @@ export const fetchCountriesReducer = (state = initialState, action) => {
       }
 
     case actions.SORT_COUNTRIES_BY_NAME:
+      const orderBy = action.payload
+      console.log(orderBy)
       const countries = state.countries
-      const sortedCountries = countries.sort((a, b) =>
-        a.name.common > b.name.common
-          ? 1
-          : b.name.common > a.name.common
-          ? -1
-          : 0
-      )
+      const sortedCountries = countries.sort((a, b) => {
+        if (a.name.common > b.name.common) {
+          if (orderBy === "asc") {
+            return 1
+          }
+          return -1
+        }
+
+        if (b.name.common > a.name.common) {
+          if (orderBy === "asc") {
+            return -1
+          }
+          return 1
+        }
+        return 0
+      })
 
       return {
         ...state,
@@ -43,10 +54,23 @@ export const fetchCountriesReducer = (state = initialState, action) => {
       }
 
     case actions.SORT_COUNTRIES_BY_POPULATION:
+      const orderByOne = action.payload
       const countriesTwo = state.countries
-      const sortedCountriesTwo = countriesTwo.sort((a, b) =>
-        a.population > b.population ? 1 : b.population > a.population ? -1 : 0
-      )
+      const sortedCountriesTwo = countriesTwo.sort((a, b) => {
+        if (a.population > b.population) {
+          if (orderByOne === "asc") {
+            return 1
+          }
+          return -1
+        }
+        if (b.population > a.population) {
+          if (orderByOne === "asc") {
+            return -1
+          }
+          return 1
+        }
+        return 0
+      })
 
       return {
         ...state,
@@ -54,10 +78,23 @@ export const fetchCountriesReducer = (state = initialState, action) => {
       }
 
     case actions.SORT_COUNTRIES_BY_REGION:
+      const orderByTwo = action.payload
       const countriesThree = state.countries
-      const sortedCountriesThree = countriesThree.sort((a, b) =>
-        a.region > b.region ? 1 : b.region > a.region ? -1 : 0
-      )
+      const sortedCountriesThree = countriesThree.sort((a, b) => {
+        if (a.region > b.region) {
+          if (orderByTwo === "asc") {
+            return 1
+          }
+          return -1
+        }
+        if (b.region > a.region) {
+          if (orderByTwo === "asc") {
+            return -1
+          }
+          return 1
+        }
+        return 0
+      })
 
       return {
         ...state,

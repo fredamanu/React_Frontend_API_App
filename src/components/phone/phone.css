@@ -1,0 +1,29 @@
+.phone-container {
+  width: 40%;
+  margin: 70px auto 5px;
+}
+
+#group-one {
+  animation: blink 5s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0% {
+    transform: scale(0.75);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.75);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(0.75);
+  }
+}

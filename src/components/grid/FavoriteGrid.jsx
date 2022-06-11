@@ -35,7 +35,7 @@ export default function FavoriteGrid() {
         justifyContent="center"
         rowSpacing={0.2}
         columnSpacing={{ xs: 0.2, sm: 0.2, md: 0.2 }}
-        style={{ width: 1000, marginLeft: 170 }}
+        style={{ width: 700, margin: "auto" }}
       >
         {list.map((item) => (
           <Grid key={item.name} item>

@@ -7,6 +7,9 @@ import MyTable from "../components/table/MyTable.jsx"
 import NavBar from "../components/navbar/NavBar"
 import { fetchCountries } from "../redux/actions/fetchCountries"
 import { ThemeContext } from "../ThemeContext"
+import SortTable from "../components/sort/SortTable"
+import SearchBar from "../components/searchbar/SeachBar"
+import HomeHero from "../components/homehero/HomeHero"
 
 export default function HomePage() {
   const { dark } = useContext(ThemeContext)
@@ -28,12 +31,15 @@ export default function HomePage() {
   if (error) return <h4>OOps!! An Error Occured</h4>
 
   return (
-    <div style={{ backgroundColor: dark ? "#212121" : "#fff" }}>
+    <div style={{ backgroundColor: dark ? "#435b71" : "#fff" }}>
       <NavBar />
+      <HomeHero />
       {loading ? (
         <LoadingIcon />
       ) : (
-        <div style={{ backgroundColor: dark ? "#212121" : "#fff" }}>
+        <div style={{ backgroundColor: dark ? "#435b71" : "#fff" }}>
+          <SearchBar />
+          <SortTable />
           <MyTable data={filterCountries} />
         </div>
       )}

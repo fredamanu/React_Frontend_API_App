@@ -18,8 +18,8 @@ export default function FavoriteCountries() {
   return (
     <div
       style={{
-        backgroundColor: dark ? "#212121" : "#fff",
-        color: dark ? "rgb(206, 204, 204)" : "inherit",
+        backgroundColor: dark ? "#435b71" : "#fff",
+        color: dark ? "#fff" : "inherit",
       }}
     >
       <NavBar />

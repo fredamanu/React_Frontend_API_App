@@ -10,9 +10,11 @@ import {
   sortCountriesByPopulation,
   sortCountriesByRegion,
 } from "../../redux/actions/sortCountries"
+import { ThemeContext } from "../../ThemeContext"
 import "./sort.css"
 
 export default function SortTable() {
+  const { dark } = React.useContext(ThemeContext)
   const dispatch = useDispatch()
   const [sort, setSort] = React.useState("")
 
@@ -21,27 +23,27 @@ export default function SortTable() {
   }
 
   const handleNameSorting = (orderBy) => {
-    dispatch(sortCountriesByName())
+    dispatch(sortCountriesByName(orderBy))
   }
 
   const handlePopulationSorting = (orderBy) => {
-    dispatch(sortCountriesByPopulation())
+    dispatch(sortCountriesByPopulation(orderBy))
   }
 
   const handleRegionSorting = (orderBy) => {
-    dispatch(sortCountriesByRegion())
+    dispatch(sortCountriesByRegion(orderBy))
   }
   return (
     <div className="sort-container">
-      <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
+      <FormControl variant="standard" sx={{ m: 1, width: "100%" }}>
         <InputLabel
-          sx={{ color: "rgb(206, 204, 204)" }}
+          sx={{ color: dark ? "#fff" : "black" }}
           id="demo-simple-select-standard-label"
         >
-          Sort Table
+          Sort By:
         </InputLabel>
         <Select
-          sx={{ color: "rgb(206, 204, 204)" }}
+          sx={{ color: dark ? "#fff" : "black" }}
           labelId="demo-simple-select-standard-label"
           id="demo-simple-select-standard"
           value={sort}
@@ -51,14 +53,35 @@ export default function SortTable() {
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
-          <MenuItem onClick={handleNameSorting} value="name">
-            Name
+          <MenuItem onClick={() => handleNameSorting("asc")} value="name a-z">
+            Name(A-Z)
           </MenuItem>
-          <MenuItem onClick={handlePopulationSorting} value="population">
-            Population
+          <MenuItem onClick={() => handleNameSorting("desc")} value="name z-a">
+            Name(Z-A)
           </MenuItem>
-          <MenuItem onClick={handleRegionSorting} value="region">
-            Region
+          <MenuItem
+            onClick={() => handlePopulationSorting("asc")}
+            value="population asc"
+          >
+            Population(Low-High)
+          </MenuItem>
+          <MenuItem
+            onClick={() => handlePopulationSorting("desc")}
+            value="population desc"
+          >
+            Population(High-Low)
+          </MenuItem>
+          <MenuItem
+            onClick={() => handleRegionSorting("asc")}
+            value="region asc"
+          >
+            Region(A-Z)
+          </MenuItem>
+          <MenuItem
+            onClick={() => handleRegionSorting("desc")}
+            value="region desc"
+          >
+            Region(Z-A)
           </MenuItem>
         </Select>
       </FormControl>

@@ -11,6 +11,7 @@ import "./searchbar.css"
 export default function SearchFav() {
   const dispatch = useDispatch()
   const { dark } = useContext(ThemeContext)
+
   const handleChange = (e) => {
     dispatch(setSearchTermTwo(e.target.value))
   }
@@ -24,14 +25,14 @@ export default function SearchFav() {
         p: "0px 1px",
         display: "flex",
         alignItems: "center",
-        width: 700,
-        backgroundColor: dark ? "#413F42" : "#fff",
-        color: "#fff",
+        width: 500,
+        backgroundColor: dark ? "#F9F9F9" : "#fff",
+        color: dark ? "#ccc" : "#fff",
       }}
     >
       <InputBase
         className="text-field-2"
-        sx={{ ml: 5, flex: 1, color: dark ? "#fff" : "black" }}
+        sx={{ ml: 5, flex: 1, color: "black" }}
         placeholder="Find more countries to add to your list"
         inputProps={{ "aria-label": "search for a country" }}
         onChange={handleChange}

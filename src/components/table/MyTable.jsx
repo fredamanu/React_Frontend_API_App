@@ -59,12 +59,12 @@ export default function MyTable({ data }) {
     <div
       className="main-table"
       style={{
-        width: "70%",
+        width: "80%",
         overflow: "hidden",
-        backgroundColor: dark ? "#212121" : "#FFF2F2",
+        backgroundColor: dark ? "#435b71" : "#fff",
       }}
     >
-      <TableContainer sx={{ maxHeight: 450 }}>
+      <TableContainer sx={{ maxHeight: 550 }}>
         <Table stickyHeader aria-label="sticky table">
           <THead columns={columns} dark={dark} />
           <Tbody

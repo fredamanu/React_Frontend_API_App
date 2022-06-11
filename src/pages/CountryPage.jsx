@@ -26,8 +26,8 @@ export default function CountryPage() {
   return (
     <div
       style={{
-        backgroundColor: dark ? "#212121" : "inherit",
-        color: dark ? "rgb(206, 204, 204)" : "inherit",
+        backgroundColor: dark ? "#435b71" : "inherit",
+        color: dark ? "#fff" : "inherit",
       }}
     >
       <NavBar />
