@@ -38,7 +38,7 @@ export default function FavoriteGrid() {
         style={{ width: 700, margin: "auto" }}
       >
         {list.map((item) => (
-          <Grid key={item.name} item>
+          <Grid key={item.name} item xs={12} sm={4}>
             <div
               className={
                 dark ? "grid-item-container-dark" : "grid-item-container"

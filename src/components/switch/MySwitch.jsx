@@ -10,8 +10,8 @@ export default function MySwitch() {
   const { dark, setDark } = React.useContext(ThemeContext)
 
   const handleClick = () => {
-    setDark(!dark)
-    localStorage.setItem("dark", !dark)
+    dark === null ? setDark("true") : setDark(null)
+    // localStorage.setItem("dark", dark)
   }
 
   return (

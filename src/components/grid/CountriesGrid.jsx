@@ -51,7 +51,13 @@ export default function CountriesGrid() {
         }}
       >
         {newCountries.map((item) => (
-          <Grid key={item.name.common} item sx={{ backgroundColor: "#fff" }}>
+          <Grid
+            item
+            xs={12}
+            sm={4}
+            key={item.name.common}
+            sx={{ backgroundColor: "#fff" }}
+          >
             <div
               className={
                 dark ? "grid-item-container-dark" : "grid-item-container"

@@ -20,13 +20,13 @@ export const favoriteCountriesReducer = (state = initialState, action) => {
       }
 
       const favoriteCountry = action.payload
-      const newFavoriteCountry = [favoriteCountry, ...state.favoriteCountries]
+      const newFavoriteCountries = [favoriteCountry, ...state.favoriteCountries]
       toast.success(`${favoriteCountry.name} added to list`, {
         position: "bottom-left",
       })
       return {
         ...state,
-        favoriteCountries: newFavoriteCountry,
+        favoriteCountries: newFavoriteCountries,
         count: state.count + 1,
       }
 
