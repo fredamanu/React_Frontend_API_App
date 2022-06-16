@@ -4,7 +4,7 @@ import InputBase from "@mui/material/InputBase"
 import IconButton from "@mui/material/IconButton"
 import SearchIcon from "@mui/icons-material/Search"
 
-import { setSearchTermOne } from "../../redux/actions/searchTerm"
+import { setSearchTermOne } from "../../redux/actions/searchTerm.ts"
 import { ThemeContext } from "../../ThemeContext"
 import "./searchbar.css"
 

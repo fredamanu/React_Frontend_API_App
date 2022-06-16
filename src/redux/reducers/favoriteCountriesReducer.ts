@@ -1,12 +1,13 @@
 import * as actions from "../actions/types"
+import { ActionTypes, FavoriteCountriesReducerInitialState } from "../../typescript/types"
 import { toast } from "react-toastify"
 
-const initialState = {
+const initialState: FavoriteCountriesReducerInitialState = {
   favoriteCountries: [],
   count: 0,
 }
 
-export const favoriteCountriesReducer = (state = initialState, action) => {
+export const favoriteCountriesReducer = (state = initialState, action: ActionTypes) => {
   switch (action.type) {
     case actions.ADD_FAVORITE_COUNTRY:
       const isDuplicate = state.favoriteCountries.some((obj) => {

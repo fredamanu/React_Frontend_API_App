@@ -4,8 +4,7 @@ import { useDispatch, useSelector } from "react-redux"
 import Grid from "@mui/material/Grid"
 import ClearIcon from "@mui/icons-material/Clear"
 
-import { removeFavoriteCountry } from "../../redux/actions/favoriteCountries"
-import { getSelectedCountry } from "../../redux/actions/getSelectedCountry"
+import { removeFavoriteCountry } from "../../redux/actions/favoriteCountries.ts"
 import { ThemeContext } from "../../ThemeContext"
 import "./grid.css"
 
@@ -22,10 +21,6 @@ export default function FavoriteGrid() {
       flag: item.flag,
     }
     dispatch(removeFavoriteCountry(obj))
-  }
-
-  const handleGetSelectedCountry = (name) => {
-    dispatch(getSelectedCountry(name))
   }
 
   return (
@@ -55,12 +50,7 @@ export default function FavoriteGrid() {
               </div>
               <div className="flag-name-container">
                 <div className="flag-container">
-                  <Link
-                    to={{ pathname: `/country/${item.fullname}` }}
-                    onClick={() => {
-                      handleGetSelectedCountry(item.fullname)
-                    }}
-                  >
+                  <Link to={{ pathname: `/country/${item.fullname}` }}>
                     <img className="flag" src={item.flag} alt="pic" />
                   </Link>
                 </div>

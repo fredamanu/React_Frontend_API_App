@@ -5,8 +5,8 @@ import TableCell from "@mui/material/TableCell"
 import TableRow from "@mui/material/TableRow"
 import FavoriteSharpIcon from "@mui/icons-material/FavoriteSharp"
 
-import { addFavoriteCountry } from "../../redux/actions/favoriteCountries"
-import { getSelectedCountry } from "../../redux/actions/getSelectedCountry"
+import { addFavoriteCountry } from "../../redux/actions/favoriteCountries.ts"
+
 import "./mytable.css"
 
 export default function Tbody({ data, page, rowsPerPage, dark }) {
@@ -28,10 +28,6 @@ export default function Tbody({ data, page, rowsPerPage, dark }) {
     dispatch(addFavoriteCountry(obj))
   }
 
-  const handleGetSelectedCountry = (name) => {
-    dispatch(getSelectedCountry(name))
-  }
-
   return (
     <TableBody>
       {data
@@ -44,9 +40,6 @@ export default function Tbody({ data, page, rowsPerPage, dark }) {
                 <Link
                   className={dark ? "a-dark" : "a-light"}
                   to={{ pathname: `/country/${row.name.common}` }}
-                  onClick={() => {
-                    handleGetSelectedCountry(row.name.common)
-                  }}
                 >
                   {row.name.common}
                 </Link>

@@ -1,8 +1,11 @@
 import React, { useContext } from "react"
 import { useNavigate } from "react-router-dom"
+import HomeIcon from "@mui/icons-material/Home"
+
 import { ThemeContext } from "../../ThemeContext"
+import MySwitch from "../switch/MySwitch"
+import CountFavorites from "../count/CountFavorites"
 import "./navbar.css"
-import NavBarOne from "./NavBarOne"
 
 export default function NavBar() {
   const navigate = useNavigate()
@@ -14,7 +17,17 @@ export default function NavBar() {
 
   return (
     <div className={dark ? "navbar-container-dark" : "navbar-container"}>
-      <NavBarOne handleClick={handleClick} />
+      <div className="children1">
+        <h5 className={dark ? "logo-dark" : "logo"}>Count-Trees</h5>
+        <div className="sub-children1">
+          <HomeIcon
+            className={dark ? "home-icon-dark" : "home-icon"}
+            onClick={handleClick}
+          />
+          <CountFavorites />
+          <MySwitch />
+        </div>
+      </div>
     </div>
   )
 }

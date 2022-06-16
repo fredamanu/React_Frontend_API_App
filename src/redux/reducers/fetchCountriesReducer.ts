@@ -1,12 +1,14 @@
 import * as actions from "../actions/types"
+import { ActionTypes } from "../../typescript/types"
+import { FetchCountriesReducerInitialState } from "../../typescript/types"
 
-const initialState = {
+const initialState: FetchCountriesReducerInitialState = {
   countries: [],
   loading: false,
   error: null,
 }
 
-export const fetchCountriesReducer = (state = initialState, action) => {
+export const fetchCountriesReducer = (state = initialState, action: ActionTypes) => {
   switch (action.type) {
     case actions.FETCH_COUNTRIES_REQUEST:
       return {

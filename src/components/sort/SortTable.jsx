@@ -9,7 +9,7 @@ import {
   sortCountriesByName,
   sortCountriesByPopulation,
   sortCountriesByRegion,
-} from "../../redux/actions/sortCountries"
+} from "../../redux/actions/sortCountries.ts"
 import { ThemeContext } from "../../ThemeContext"
 import "./sort.css"
 

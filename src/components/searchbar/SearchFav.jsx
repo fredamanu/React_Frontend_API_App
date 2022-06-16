@@ -4,7 +4,7 @@ import Paper from "@mui/material/Paper"
 import InputBase from "@mui/material/InputBase"
 
 import PopOver from "../popover/PopOver"
-import { setSearchTermTwo } from "../../redux/actions/searchTerm"
+import { setSearchTermTwo } from "../../redux/actions/searchTerm.ts"
 import { ThemeContext } from "../../ThemeContext"
 import "./searchbar.css"
 

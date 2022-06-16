@@ -1,9 +1,9 @@
 import { combineReducers } from "redux"
-import { fetchCountriesReducer } from "./fetchCountriesReducer"
-import { searchTermReducer } from "./searchTermReducer"
-import { fetchCountryReducer } from "./fetchCountryReducer"
-import { favoriteCountriesReducer } from "./favoriteCountriesReducer"
-import { getSelectedCountryReducer } from "../reducers/getSelectedCountry"
+import { fetchCountriesReducer } from "./fetchCountriesReducer.ts"
+import { searchTermReducer } from "./searchTermReducer.ts"
+import { fetchCountryReducer } from "./fetchCountryReducer.ts"
+import { favoriteCountriesReducer } from "./favoriteCountriesReducer.ts"
+import { getSelectedCountryReducer } from "../reducers/getSelectedCountry.ts"
 
 const rootReducer = combineReducers({
   fetchCountriesReducer,
