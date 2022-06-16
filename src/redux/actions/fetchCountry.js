@@ -1,4 +1,5 @@
 import * as actions from "./types"
+import axios from "axios"
 
 export const fetchCountryRequest = () => ({
   type: actions.FETCH_COUNTRY_REQUEST,
@@ -18,9 +19,13 @@ export const fetchCountry = (selectedCountry) => {
   return function (dispatch) {
     const url = `https://restcountries.com/v3.1/name/${selectedCountry}?fullText=true`
     dispatch(fetchCountryRequest())
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => dispatch(fetchCountrySuccess(data)))
-      .catch((err) => dispatch(fetchCountryFailure(err)))
+    axios
+      .get(url)
+      .then((response) => {
+        dispatch(fetchCountrySuccess(response.data))
+      })
+      .catch((err) => {
+        dispatch(fetchCountryFailure(err.message))
+      })
   }
 }
