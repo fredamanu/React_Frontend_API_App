@@ -1,12 +1,12 @@
 import * as actions from "./types"
 import axios from "axios"
-import {CountryTwo} from "../../typescript/types"
+import {Country} from "../../typescript/types"
 
 export const fetchCountryRequest = () => ({
   type: actions.FETCH_COUNTRY_REQUEST,
 })
 
-export const fetchCountrySuccess = (data: CountryTwo[]) => ({
+export const fetchCountrySuccess = (data: Country[]) => ({
   type: actions.FETCH_COUNTRY_SUCCESS,
   payload: data,
 })

@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, {useState, useContext} from "react"
 import { useDispatch } from "react-redux"
 import InputLabel from "@mui/material/InputLabel"
 import MenuItem from "@mui/material/MenuItem"
@@ -9,28 +9,29 @@ import {
   sortCountriesByName,
   sortCountriesByPopulation,
   sortCountriesByRegion,
-} from "../../redux/actions/sortCountries.ts"
+} from "../../redux/actions/sortCountries"
 import { ThemeContext } from "../../ThemeContext"
 import "./sort.css"
 
 export default function SortTable() {
-  const { dark } = React.useContext(ThemeContext)
+  const [sort, setSort] = useState("")
+  const { dark } = useContext(ThemeContext)
   const dispatch = useDispatch()
-  const [sort, setSort] = React.useState("")
+ 
 
-  const handleChange = (event) => {
+  const handleChange = (event: any) => {
     setSort(event.target.value)
   }
 
-  const handleNameSorting = (orderBy) => {
+  const handleNameSorting = (orderBy: string) => {
     dispatch(sortCountriesByName(orderBy))
   }
 
-  const handlePopulationSorting = (orderBy) => {
+  const handlePopulationSorting = (orderBy: string) => {
     dispatch(sortCountriesByPopulation(orderBy))
   }
 
-  const handleRegionSorting = (orderBy) => {
+  const handleRegionSorting = (orderBy: string) => {
     dispatch(sortCountriesByRegion(orderBy))
   }
   return (

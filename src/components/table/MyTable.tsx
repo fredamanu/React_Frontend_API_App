@@ -1,11 +1,12 @@
-import * as React from "react"
+import { useContext, useState } from "react"
 import Table from "@mui/material/Table"
 import TableContainer from "@mui/material/TableContainer"
 import TablePagination from "@mui/material/TablePagination"
 
-import THead from "./THead"
-import Tbody from "./Tbody"
+import MyTableHead from "./MyTableHead"
+import MyTableBody from "./MyTableBody"
 import { ThemeContext } from "../../ThemeContext"
+import { Country } from "../../typescript/types"
 import "./mytable.css"
 
 const columns = [
@@ -14,7 +15,12 @@ const columns = [
     label: "Flag",
     minWidth: 170,
   },
-  { id: "name.common", label: "Name", minWidth: 100, align: "left" },
+  { 
+    id: "name.common", 
+    label: "Name", 
+    minWidth: 100, 
+    align: "left" 
+  },
   {
     id: "population",
     label: "Population",
@@ -41,16 +47,21 @@ const columns = [
   },
 ]
 
-export default function MyTable({ data }) {
-  const { dark } = React.useContext(ThemeContext)
-  const [page, setPage] = React.useState(0)
-  const [rowsPerPage, setRowsPerPage] = React.useState(10)
+type Props = {
+  data: Country[]
+}
 
-  const handleChangePage = (event, newPage) => {
+
+ const MyTable: React.FC<Props> = ({ data }) =>{
+  const { dark } = useContext(ThemeContext)
+  const [page, setPage] = useState(0)
+  const [rowsPerPage, setRowsPerPage] = useState(10)
+
+  const handleChangePage = (event: any, newPage: number) => {
     setPage(newPage)
   }
 
-  const handleChangeRowsPerPage = (event) => {
+  const handleChangeRowsPerPage = (event: any) => {
     setRowsPerPage(+event.target.value)
     setPage(0)
   }
@@ -66,9 +77,8 @@ export default function MyTable({ data }) {
     >
       <TableContainer sx={{ maxHeight: 550 }}>
         <Table stickyHeader aria-label="sticky table">
-          <THead columns={columns} dark={dark} />
-          <Tbody
-            dark={dark}
+          <MyTableHead columns={columns} />
+          <MyTableBody
             data={data}
             page={page}
             rowsPerPage={rowsPerPage}
@@ -88,3 +98,5 @@ export default function MyTable({ data }) {
     </div>
   )
 }
+
+export default MyTable

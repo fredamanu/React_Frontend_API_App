@@ -7,6 +7,7 @@ import MySwitch from "../switch/MySwitch"
 import CountFavorites from "../count/CountFavorites"
 import "./navbar.css"
 
+
 export default function NavBar() {
   const navigate = useNavigate()
   const { dark } = useContext(ThemeContext)

@@ -2,10 +2,10 @@ import * as actions from "../redux/actions/types"
 
 export type ActionTypes = 
     | {type: typeof actions.FETCH_COUNTRIES_REQUEST}
-    | {type: typeof actions.FETCH_COUNTRIES_SUCCESS, payload: CountryOne[]}
+    | {type: typeof actions.FETCH_COUNTRIES_SUCCESS, payload: Country[]}
     | {type: typeof actions.FETCH_COUNTRIES_FAILURE, payload: string}
     | {type: typeof actions.FETCH_COUNTRY_REQUEST}
-    | {type: typeof actions.FETCH_COUNTRY_SUCCESS, payload: CountryTwo[]}
+    | {type: typeof actions.FETCH_COUNTRY_SUCCESS, payload: Country[]}
     | {type: typeof actions.FETCH_COUNTRY_FAILURE, payload: string}
     | {type: typeof actions.ADD_FAVORITE_COUNTRY, payload: FavoriteCountry}
     | {type: typeof actions.REMOVE_FAVORITE_COUNTRY, payload: FavoriteCountry}
@@ -23,23 +23,14 @@ export type FavoriteCountry ={
     flag: string
 }
 
-export type CountryOne = {
-    flag: string,
-    name:{
-        common: string
-    },
-    population: number,
-    region: string,
-    languages:{
-        [key: string]: string
-    }
-}
 
-export type CountryTwo = {
+
+export type Country = {
     name: {
         common: string,
         official: string
     },
+    flag: string,
     flags: {
         png: string
     },
@@ -57,16 +48,21 @@ export type CountryTwo = {
     maps: {
         googleMaps: string
     }
+    population: number,
+    region: string,
+    languages:{
+        [key: string]: string
+    }
 }
 
 export type FetchCountryReducerInitialState = {
-    country: CountryTwo[],
+    country: Country[],
     loading: boolean,
     error: null | string
 }
 
 export type FetchCountriesReducerInitialState = {
-    countries: CountryOne[],
+    countries: Country[],
     loading: boolean,
     error: null | string
 }

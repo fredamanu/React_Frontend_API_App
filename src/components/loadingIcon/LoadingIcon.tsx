@@ -6,7 +6,7 @@ import "./loadingIcon.css"
 
 export default function LoadingIcon() {
   return (
-    <Box className="loadingIcon" sx={{ display: "flex" }}>
+    <Box className="loadingIcon">
       <CircularProgress color="secondary" />
     </Box>
   )

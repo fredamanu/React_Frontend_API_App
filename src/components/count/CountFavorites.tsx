@@ -6,12 +6,13 @@ import FavoriteIcon from "@mui/icons-material/Favorite"
 
 import "./countIcon.css"
 import { ThemeContext } from "../../ThemeContext"
+import {State} from "../../typescript/types"
 
 export default function CountFavorites() {
   const { dark } = React.useContext(ThemeContext)
   const navigate = useNavigate()
-  const state = useSelector((state) => state)
-  const count = state.favoriteCountriesReducer.count
+  const count = useSelector((state: State) => state.favoriteCountriesReducer.count)
+  
 
   const handleClick = () => {
     navigate("/favoritecountries")

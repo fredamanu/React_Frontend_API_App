@@ -1,8 +1,26 @@
+import { useContext } from "react"
 import TableHead from "@mui/material/TableHead"
 import TableRow from "@mui/material/TableRow"
 import TableCell from "@mui/material/TableCell"
 
-export default function THead({ columns, dark }) {
+import { ThemeContext } from "../../ThemeContext"
+
+type Props = {
+  columns: ({
+    id: string;
+    label: string;
+    minWidth: number;
+    align?: any;
+} | {
+    id: string;
+    label: string;
+    minWidth: number;
+    align: any;
+})[]
+}
+
+ const MyTableHead: React.FC<Props> = ({ columns })=> {
+  const { dark } = useContext(ThemeContext)
   return (
     <TableHead>
       <TableRow>
@@ -24,3 +42,5 @@ export default function THead({ columns, dark }) {
     </TableHead>
   )
 }
+
+export default MyTableHead

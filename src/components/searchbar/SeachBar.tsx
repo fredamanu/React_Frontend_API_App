@@ -1,34 +1,24 @@
-import * as React from "react"
+import {useContext} from "react"
 import { useDispatch } from "react-redux"
 import InputBase from "@mui/material/InputBase"
 import IconButton from "@mui/material/IconButton"
 import SearchIcon from "@mui/icons-material/Search"
 
-import { setSearchTermOne } from "../../redux/actions/searchTerm.ts"
+import { setSearchTermOne } from "../../redux/actions/searchTerm"
 import { ThemeContext } from "../../ThemeContext"
 import "./searchbar.css"
 
 export default function SearchBar() {
-  const { dark } = React.useContext(ThemeContext)
+  const { dark } = useContext(ThemeContext)
   const dispatch = useDispatch()
 
-  const handleSearch = (e) => {
+  const handleSearch = (e: any) => {
     dispatch(setSearchTermOne(e.target.value))
   }
 
   return (
     <div
-      className="filter-container"
-      component="form"
-      style={{
-        p: "2px 4px",
-        display: "flex",
-        alignItems: "center",
-        borderRadius: 10,
-        width: "80%",
-        backgroundColor: dark ? "#F9F9F9" : "#EEEEEE",
-        color: "white",
-      }}
+      className={dark? "filter-container-dark": "filter-container"} 
     >
       <InputBase
         className="text-field"

@@ -5,25 +5,32 @@ import TableCell from "@mui/material/TableCell"
 import TableRow from "@mui/material/TableRow"
 import FavoriteSharpIcon from "@mui/icons-material/FavoriteSharp"
 
-import { addFavoriteCountry } from "../../redux/actions/favoriteCountries.ts"
-
+import { addFavoriteCountry } from "../../redux/actions/favoriteCountries"
+import {Country} from "../../typescript/types"
+import { useContext } from "react"
+import { ThemeContext } from "../../ThemeContext"
 import "./mytable.css"
 
-export default function Tbody({ data, page, rowsPerPage, dark }) {
-  const dispatch = useDispatch()
-  const style = {
-    align: "left",
-  }
+type Props = {
+  data: Country[],
+  page: number,
+  rowsPerPage: number
+}
 
-  const handleCountClick = (row) => {
+const MyTableBody: React.FC<Props> = ({ data, page, rowsPerPage }) =>{
+  const { dark } = useContext(ThemeContext)
+  const dispatch = useDispatch()
+ 
+
+  const handleCountClick = (country: Country) => {
     const newName =
-      row.name.common.length > 15
-        ? row.name.common.slice(0, 15) + "..."
-        : row.name.common
+      country.name.common.length > 15
+        ? country.name.common.slice(0, 15) + "..."
+        : country.name.common
     const obj = {
       name: newName,
-      fullname: row.name.common,
-      flag: row.flags.png,
+      fullname: country.name.common,
+      flag: country.flags.png,
     }
     dispatch(addFavoriteCountry(obj))
   }
@@ -32,40 +39,43 @@ export default function Tbody({ data, page, rowsPerPage, dark }) {
     <TableBody>
       {data
         .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-        .map((row) => {
+        .map((country) => {
           return (
-            <TableRow hover role="checkbox" tabIndex={-1} key={row.name.common}>
-              <TableCell sx={{ fontSize: 100 }}>{row.flag}</TableCell>
-              <TableCell align={style.align}>
+            <TableRow
+              hover
+              role="checkbox"
+              tabIndex={-1}
+              key={country.name.common}
+            >
+              <TableCell sx={{ fontSize: 100 }}>{country.flag}</TableCell>
+              <TableCell 
+              >
                 <Link
                   className={dark ? "a-dark" : "a-light"}
-                  to={{ pathname: `/country/${row.name.common}` }}
+                  to={{ pathname: `/country/${country.name.common}` }}
                 >
-                  {row.name.common}
+                  {country.name.common}
                 </Link>
               </TableCell>
               <TableCell
-                align={style.align}
                 sx={{ color: dark ? "#fff" : "#inherit" }}
               >
-                {row.population.toLocaleString("en-US")}
+                {country.population.toLocaleString("en-US")}
               </TableCell>
               <TableCell
-                align={style.align}
                 sx={{ color: dark ? "#fff" : "inherit" }}
               >
-                {row.region}
+                {country.region}
               </TableCell>
               <TableCell
-                align={style.align}
                 sx={{ color: dark ? "#fff" : "inherit" }}
               >
                 <ul>
-                  {row.languages
-                    ? Object.values(row.languages).map((lang) => {
+                  {country.languages
+                    ? Object.values(country.languages).map((language) => {
                         return (
-                          <li key={lang} align={style.align}>
-                            {lang}
+                          <li key={language}>
+                            {language}
                           </li>
                         )
                       })
@@ -76,7 +86,7 @@ export default function Tbody({ data, page, rowsPerPage, dark }) {
                 <FavoriteSharpIcon
                   className={dark ? "favIcon-dark" : "favIcon"}
                   sx={{ fontSize: 40 }}
-                  onClick={() => handleCountClick(row)}
+                  onClick={() => handleCountClick(country)}
                 />
               </TableCell>
             </TableRow>
@@ -85,3 +95,6 @@ export default function Tbody({ data, page, rowsPerPage, dark }) {
     </TableBody>
   )
 }
+
+
+export default MyTableBody
