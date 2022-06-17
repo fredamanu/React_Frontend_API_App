@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useContext } from "react"
 import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import Grid from "@mui/material/Grid"
@@ -9,8 +9,8 @@ import { getSelectedCountry } from "../../redux/actions/getSelectedCountry"
 import { ThemeContext } from "../../ThemeContext"
 import "./grid.css"
 
-export default function FavoriteGrid() {
-  const { dark } = React.useContext(ThemeContext)
+export default function FavoriteCountriesGrid() {
+  const { dark } = useContext(ThemeContext)
   const state = useSelector((state) => state)
   const dispatch = useDispatch()
   const list = state.favoriteCountriesReducer.favoriteCountries
@@ -29,7 +29,7 @@ export default function FavoriteGrid() {
   }
 
   return (
-    <div className=" favs-container">
+    <div className="fav-countries-container">
       <Grid
         container
         justifyContent="center"
