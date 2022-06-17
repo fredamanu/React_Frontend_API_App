@@ -1,9 +1,9 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
 
-import "./contentOne.css"
+import "./main-content.css"
 
-export default function ContentOne() {
+export default function MainContent() {
   const navigate = useNavigate()
 
   const handleClick = () => {

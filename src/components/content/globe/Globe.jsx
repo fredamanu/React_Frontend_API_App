@@ -1,5 +1,3 @@
-import React from "react"
-
 import "./globe.css"
 
 export default function Globe() {
