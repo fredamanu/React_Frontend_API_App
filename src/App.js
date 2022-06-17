@@ -3,8 +3,6 @@ import HomePage from "./pages/HomePage.tsx"
 import CountryPage from "./pages/CountryPage"
 import FavoriteCountries from "./pages/FavoriteCountries"
 
-import "./App.css"
-
 function App() {
   return (
     <Routes>
