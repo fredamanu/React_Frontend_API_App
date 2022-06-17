@@ -3,9 +3,9 @@ import Popover from "@mui/material/Popover"
 import IconButton from "@mui/material/IconButton"
 import SearchIcon from "@mui/icons-material/Search"
 
-import CountriesGrid from "../grid/CountriesGrid"
+import CountriesGrid from "../countriesGrid/CountriesGrid"
 
-export default function PopOver() {
+export default function CountriesPopOver() {
   const [anchorEl, setAnchorEl] = React.useState(null)
 
   const handleClick = (event) => {

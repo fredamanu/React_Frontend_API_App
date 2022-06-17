@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux"
 import Paper from "@mui/material/Paper"
 import InputBase from "@mui/material/InputBase"
 
-import PopOver from "../../popover/PopOver"
+import CountriesPopOver from "../countriesPopover/CountriesPopOver"
 import { setSearchTerm } from "../../../redux/actions/searchTerm"
 import { ThemeContext } from "../../../ThemeContext"
 
@@ -36,7 +36,7 @@ export default function SearchBar() {
         inputProps={{ "aria-label": "search for a country" }}
         onChange={handleChange}
       />
-      <PopOver />
+      <CountriesPopOver />
     </Paper>
   )
 }

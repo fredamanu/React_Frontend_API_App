@@ -4,10 +4,10 @@ import { Link } from "react-router-dom"
 import Grid from "@mui/material/Grid"
 import AddIcon from "@mui/icons-material/Add"
 
-import { addFavoriteCountry } from "../../redux/actions/favoriteCountries"
-import { getSelectedCountry } from "../../redux/actions/getSelectedCountry"
-import { ThemeContext } from "../../ThemeContext"
-import "./grid.css"
+import { addFavoriteCountry } from "../../../redux/actions/favoriteCountries"
+import { getSelectedCountry } from "../../../redux/actions/getSelectedCountry"
+import { ThemeContext } from "../../../ThemeContext"
+import "./countries-grid.css"
 
 export default function CountriesGrid() {
   const { dark } = React.useContext(ThemeContext)
@@ -37,7 +37,7 @@ export default function CountriesGrid() {
   }
 
   return (
-    <div className=" favs-container">
+    <div className="countries-grid-container">
       <Grid
         container
         justifyContent="center"
@@ -59,30 +59,38 @@ export default function CountriesGrid() {
           >
             <div
               className={
-                dark ? "grid-item-container-dark" : "grid-item-container"
+                dark
+                  ? "countries-grid-item-container-dark"
+                  : "countries-grid-item-container"
               }
             >
-              <div className="icon-container">
+              <div className="countries-icon-container">
                 <AddIcon
                   sx={{ fontSize: 30 }}
-                  className="icon"
+                  className={dark ? "countries-icon-dark" : "countries-icon"}
                   onClick={() => {
                     handleClick(item)
                   }}
                 />
               </div>
-              <div className="flag-name-container">
-                <div className="flag-container">
+              <div className="countries-flag-name-container">
+                <div className="countries-flag-container">
                   <Link
                     to={{ pathname: `/country/${item.name.common}` }}
                     onClick={() => {
                       handleGetSelectedCountry(item.name.common)
                     }}
                   >
-                    <img className="flag" src={item.flags.png} alt="pic" />
+                    <img
+                      className="countries-flag"
+                      src={item.flags.png}
+                      alt="pic"
+                    />
                   </Link>
                 </div>
-                <p className="name">{item.name.common}</p>
+                <p className={dark ? "countries-name-dark" : "countries-name"}>
+                  {item.name.common}
+                </p>
               </div>
             </div>
           </Grid>
