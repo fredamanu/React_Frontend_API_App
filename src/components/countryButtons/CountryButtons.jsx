@@ -1,15 +1,13 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
-import Button from "@mui/material/Button"
-import Stack from "@mui/material/Stack"
 import MapIcon from "@mui/icons-material/Map"
 
 import {
   addFavoriteCountry,
   removeFavoriteCountry,
 } from "../../redux/actions/favoriteCountries"
-import "./button.css"
+import "./country-button.css"
 
 export default function CountryButtons() {
   const dispatch = useDispatch()
@@ -42,33 +40,25 @@ export default function CountryButtons() {
   }
 
   return (
-    <Stack className="button-container" direction="row" spacing={2}>
-      <Button
-        onClick={handleClick}
-        className="button"
-        variant="contained"
-        color="primary"
-        endIcon={country.map((c) => {
-          return c.flag
-        })}
-      >
-        {isDuplicate ? "REMOVE" : "ADD"}
-      </Button>
-      <Button
-        className="button"
-        variant="outlined"
-        color="primary"
-        endIcon={<MapIcon />}
-      >
-        <a
-          className="button-link"
-          href={country.map((c) => {
-            return c.maps.googleMaps
-          })}
-        >
-          Map
-        </a>
-      </Button>
-    </Stack>
+    <div className="button-container">
+      {country.map((property) => {
+        return (
+          <div key={property.name.common} className="flex-container">
+            <button onClick={handleClick} className="button">
+              {isDuplicate ? "REMOVE" : "ADD"}
+              <span style={{ marginLeft: 10 }}>{property.flag}</span>
+            </button>
+            <button className="button map-button">
+              <a className="map-button-link" href={property.maps.googleMaps}>
+                MAP
+                <span style={{ marginLeft: 10 }}>
+                  <MapIcon />
+                </span>
+              </a>
+            </button>
+          </div>
+        )
+      })}
+    </div>
   )
 }
