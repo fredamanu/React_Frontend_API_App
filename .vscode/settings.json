@@ -1,0 +1,8 @@
+{
+    "workbench.colorTheme": "Solarized Dark",
+    "workbench.preferredDarkColorTheme": "Default Dark+",
+    "workbench.fontAliasing": "antialiased",
+    "workbench.sideBar.location": "left",
+    "editor.fontSize": 18,
+    "workbench.editor.showTabs": true
+}

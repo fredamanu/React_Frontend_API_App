@@ -1,10 +1,10 @@
 import React, { useContext } from "react"
-import { ThemeContext } from "../../ThemeContext"
+import { ThemeContext } from "../../../ThemeContext"
 
-import SearchFav from "../search/SearchFav"
-import "./favhero.css"
+import SearchBar from "../searchbar/SearchBar"
+import "./main-searchfield.css"
 
-export default function FavHero() {
+export default function MainSearchField() {
   const { dark } = useContext(ThemeContext)
   return (
     <div className={dark ? "fav-hero-container-dark" : "fav-hero-container"}>
@@ -12,7 +12,7 @@ export default function FavHero() {
         Add countries to your list.
       </h5>
       <div className={dark ? "flex-container-dark" : "flex-container"}>
-        <SearchFav />
+        <SearchBar />
         <p className="note">Click search icon</p>
       </div>
     </div>
