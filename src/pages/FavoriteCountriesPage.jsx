@@ -2,15 +2,15 @@ import React, { useContext } from "react"
 import { useSelector } from "react-redux"
 
 import Globe from "../components/content/infomation/globe/Globe"
-import Heading from "../components/heading/Heading"
+import Heading from "../components/hero/heading/Heading"
 import InformationSection from "../components/content/infomation/InformationSection"
 import FavoriteCountriesGrid from "../components/content/favoriteCountriesGrid/FavoriteCountriesGrid"
-import MainSearchField from "../components/searchField/mainSearchField/MainSearchField"
+import MainSearchField from "../components/hero/searchField/mainSearchField/MainSearchField"
 import Footer from "../components/footer/Footer"
 import { ThemeContext } from "../ThemeContext"
 import MainNavBar from "../components/navbar/mainNav/MainNavBar"
 
-export default function FavoriteCountries() {
+export default function FavoriteCountriesPage() {
   const { dark } = useContext(ThemeContext)
   const state = useSelector((state) => state)
   const count = state.favoriteCountriesReducer.count

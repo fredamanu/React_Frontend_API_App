@@ -1,5 +1,5 @@
 import React, { useContext } from "react"
-import { ThemeContext } from "../../../ThemeContext"
+import { ThemeContext } from "../../../../ThemeContext"
 
 import SearchBar from "../searchbar/SearchBar"
 import "./main-searchfield.css"

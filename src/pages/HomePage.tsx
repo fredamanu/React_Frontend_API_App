@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 
 import Footer from "../components/footer/Footer"
-import LoadingIcon from "../components/loadingIcon/LoadingIcon"
+import LoadingIcon from "../components/content/loadingIcon/LoadingIcon"
 import MainCountriesTable from "../components/content/countriesTable/mainCountriesTable/MainCountriesTable"
 import MainNavBar from "../components/navbar/mainNav/MainNavBar"
 import { fetchCountries } from "../redux/actions/fetchCountries"

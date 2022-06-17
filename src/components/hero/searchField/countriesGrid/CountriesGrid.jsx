@@ -4,9 +4,9 @@ import { Link } from "react-router-dom"
 import Grid from "@mui/material/Grid"
 import AddIcon from "@mui/icons-material/Add"
 
-import { addFavoriteCountry } from "../../../redux/actions/favoriteCountries"
+import { addFavoriteCountry } from "../../../../redux/actions/favoriteCountries"
 
-import { ThemeContext } from "../../../ThemeContext"
+import { ThemeContext } from "../../../../ThemeContext"
 import "./countries-grid.css"
 
 export default function CountriesGrid() {
