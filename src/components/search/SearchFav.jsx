@@ -6,7 +6,6 @@ import InputBase from "@mui/material/InputBase"
 import PopOver from "../popover/PopOver"
 import { setSearchTerm } from "../../redux/actions/searchTerm.ts"
 import { ThemeContext } from "../../ThemeContext"
-import "./searchbar.css"
 
 export default function SearchFav() {
   const dispatch = useDispatch()

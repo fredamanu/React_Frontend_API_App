@@ -1,4 +1,4 @@
-import React, {useState, useContext} from "react"
+import {useState, useContext} from "react"
 import { useDispatch } from "react-redux"
 import InputLabel from "@mui/material/InputLabel"
 import MenuItem from "@mui/material/MenuItem"
@@ -9,8 +9,8 @@ import {
   sortCountriesByName,
   sortCountriesByPopulation,
   sortCountriesByRegion,
-} from "../../redux/actions/sortCountries"
-import { ThemeContext } from "../../ThemeContext"
+} from "../../../redux/actions/sortCountries"
+import { ThemeContext } from "../../../ThemeContext"
 import "./sort.css"
 
 export default function SortTable() {

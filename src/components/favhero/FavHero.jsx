@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import { ThemeContext } from "../../ThemeContext"
 
-import SearchFav from "../searchbar/SearchFav"
+import SearchFav from "../search/SearchFav"
 import "./favhero.css"
 
 export default function FavHero() {

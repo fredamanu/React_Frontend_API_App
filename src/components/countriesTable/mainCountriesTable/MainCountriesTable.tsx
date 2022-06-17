@@ -5,8 +5,8 @@ import TablePagination from "@mui/material/TablePagination"
 
 import CountriesTableHead from "./CountriesTableHead"
 import CountriesTableBody from "./CountriesTableBody"
-import { ThemeContext } from "../../ThemeContext"
-import { Country } from "../../typescript/types"
+import { ThemeContext } from "../../../ThemeContext"
+import { Country } from "../../../typescript/types"
 import "./main-table.css"
 
 const columns = [
