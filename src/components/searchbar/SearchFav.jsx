@@ -4,7 +4,7 @@ import Paper from "@mui/material/Paper"
 import InputBase from "@mui/material/InputBase"
 
 import PopOver from "../popover/PopOver"
-import { setSearchTermTwo } from "../../redux/actions/searchTerm"
+import { setSearchTerm } from "../../redux/actions/searchTerm"
 import { ThemeContext } from "../../ThemeContext"
 import "./searchbar.css"
 
@@ -13,7 +13,7 @@ export default function SearchFav() {
   const { dark } = useContext(ThemeContext)
 
   const handleChange = (e) => {
-    dispatch(setSearchTermTwo(e.target.value))
+    dispatch(setSearchTerm(e.target.value))
   }
 
   return (

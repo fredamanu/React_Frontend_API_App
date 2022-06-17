@@ -17,7 +17,7 @@ export default function HomePage() {
   const state = useSelector((state) => state)
   const loading = state.fetchCountriesReducer.loading
   const error = state.fetchCountriesReducer.error
-  const keyword = state.searchTermReducer.keywordOne
+  const keyword = state.searchTermReducer.keyword
   const countries = state.fetchCountriesReducer.countries
 
   const filterCountries = countries?.filter((country) => {
