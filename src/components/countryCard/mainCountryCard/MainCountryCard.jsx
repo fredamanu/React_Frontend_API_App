@@ -3,7 +3,7 @@ import { useSelector } from "react-redux"
 
 import CountryButtons from "../../countryButtons/CountryButtons"
 import CountryFlagCarousel from "../countryFlagCarousel/CountryFlagCarousel"
-import FunFacts from "../../fun-facts/FunFacts"
+import FunFacts from "../funFacts/FunFacts"
 import "./main-countrycard.css"
 
 export default function MainCountryCard() {

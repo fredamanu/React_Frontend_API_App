@@ -2,7 +2,7 @@ import React from "react"
 import Carousel from "react-bootstrap/Carousel"
 import { useSelector } from "react-redux"
 
-import "./countryflag-carousel.css"
+import "./carousel.css"
 
 export default function CountryFlagCarousel() {
   const state = useSelector((state) => state)
