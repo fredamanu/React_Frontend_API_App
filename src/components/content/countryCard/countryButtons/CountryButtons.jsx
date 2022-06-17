@@ -6,7 +6,7 @@ import MapIcon from "@mui/icons-material/Map"
 import {
   addFavoriteCountry,
   removeFavoriteCountry,
-} from "../../redux/actions/favoriteCountries"
+} from "../../../../redux/actions/favoriteCountries"
 import "./country-button.css"
 
 export default function CountryButtons() {

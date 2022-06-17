@@ -1,7 +1,7 @@
 import React from "react"
 import { useSelector } from "react-redux"
 
-import CountryButtons from "../../countryButtons/CountryButtons"
+import CountryButtons from "../countryButtons/CountryButtons"
 import MyCarousel from "../countryFlagCarousel/CountryFlagCarousel"
 import FunFacts from "../funFacts/FunFacts"
 import "./main-countrycard.css"

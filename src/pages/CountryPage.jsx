@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
 
 import { getSelectedCountry } from "../redux/actions/getSelectedCountry.ts"
-import MainCountryCard from "../components/countryCard/mainCountryCard/MainCountryCard"
+import MainCountryCard from "../components/content/countryCard/mainCountryCard/MainCountryCard"
 import Footer from "../components/footer/Footer"
 import LoadingIcon from "../components/loadingIcon/LoadingIcon"
 import MainNavBar from "../components/navbar/mainNav/MainNavBar"

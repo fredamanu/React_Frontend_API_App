@@ -1,10 +1,10 @@
 import React, { useContext } from "react"
 import { useSelector } from "react-redux"
 
-import Globe from "../components/content/globe/Globe"
-import Heading from "../components/Heading/Heading"
-import ContentOne from "../components/content/mainContent/MainContent"
-import FavoriteCountriesGrid from "../components/favoriteCountriesGrid/FavoriteCountriesGrid"
+import Globe from "../components/content/infomation/globe/Globe"
+import Heading from "../components/heading/Heading"
+import InformationSection from "../components/content/infomation/InformationSection"
+import FavoriteCountriesGrid from "../components/content/favoriteCountriesGrid/FavoriteCountriesGrid"
 import MainSearchField from "../components/searchField/mainSearchField/MainSearchField"
 import Footer from "../components/footer/Footer"
 import { ThemeContext } from "../ThemeContext"
@@ -32,7 +32,7 @@ export default function FavoriteCountries() {
       ) : (
         <div>
           <Globe />
-          <ContentOne />
+          <InformationSection />
         </div>
       )}
       <Footer />

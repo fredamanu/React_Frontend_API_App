@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom"
 
-import "./main-content.css"
+import "./info-section.css"
 
-export default function MainContent() {
+export default function InformationSection() {
   const navigate = useNavigate()
 
   const handleClick = () => {
