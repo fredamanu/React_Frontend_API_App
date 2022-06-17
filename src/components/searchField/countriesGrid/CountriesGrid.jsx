@@ -64,7 +64,7 @@ export default function CountriesGrid() {
               <div className="countries-icon-container">
                 <AddIcon
                   sx={{ fontSize: 30 }}
-                  className="countries-icon"
+                  className={dark ? "countries-icon-dark" : "countries-icon"}
                   onClick={() => {
                     handleClick(item)
                   }}

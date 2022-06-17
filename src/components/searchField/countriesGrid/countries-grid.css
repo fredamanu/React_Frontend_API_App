@@ -26,6 +26,12 @@
   font-size: 3em;
   cursor: pointer;
 }
+.countries-icon-dark {
+  font-weight: bolder;
+  font-size: 3em;
+  cursor: pointer;
+  color: #fff;
+}
 
 .countries-flag-name-container {
   text-align: center;

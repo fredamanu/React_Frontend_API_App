@@ -4,7 +4,7 @@ import { useSelector } from "react-redux"
 import Globe from "../components/globe/Globe"
 import Heading from "../components/Heading/Heading"
 import ContentOne from "../components/contentOne/ContentOne"
-import FavoriteGrid from "../components/grid/FavoriteGrid"
+import FavoriteCountriesGrid from "../components/favoriteCountriesGrid/FavoriteCountriesGrid"
 import MainSearchField from "../components/searchField/mainSearchField/MainSearchField"
 import Footer from "../components/footer/Footer"
 import { ThemeContext } from "../ThemeContext"
@@ -27,7 +27,7 @@ export default function FavoriteCountries() {
       {count > 0 ? (
         <div>
           <MainSearchField />
-          <FavoriteGrid />
+          <FavoriteCountriesGrid />
         </div>
       ) : (
         <div>
