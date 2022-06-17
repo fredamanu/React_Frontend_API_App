@@ -30,19 +30,18 @@ export const fetchCountriesReducer = (state = initialState, action: ActionTypes)
       }
 
     case actions.SORT_COUNTRIES_BY_NAME:
-      const orderBy = action.payload
-      console.log(orderBy)
-      const countries = state.countries
-      const sortedCountries = countries.sort((a, b) => {
+      const orderByName = action.payload
+      const countriesByName = state.countries
+      const sortedCountriesByName = countriesByName.sort((a, b) => {
         if (a.name.common > b.name.common) {
-          if (orderBy === "asc") {
+          if (orderByName === "asc") {
             return 1
           }
           return -1
         }
 
         if (b.name.common > a.name.common) {
-          if (orderBy === "asc") {
+          if (orderByName === "asc") {
             return -1
           }
           return 1
@@ -52,21 +51,21 @@ export const fetchCountriesReducer = (state = initialState, action: ActionTypes)
 
       return {
         ...state,
-        countries: sortedCountries,
+        countries: sortedCountriesByName,
       }
 
     case actions.SORT_COUNTRIES_BY_POPULATION:
-      const orderByOne = action.payload
-      const countriesTwo = state.countries
-      const sortedCountriesTwo = countriesTwo.sort((a, b) => {
+      const orderByPop = action.payload
+      const countriesByPop = state.countries
+      const sortedCountriesByPop = countriesByPop.sort((a, b) => {
         if (a.population > b.population) {
-          if (orderByOne === "asc") {
+          if (orderByPop === "asc") {
             return 1
           }
           return -1
         }
         if (b.population > a.population) {
-          if (orderByOne === "asc") {
+          if (orderByPop === "asc") {
             return -1
           }
           return 1
@@ -76,21 +75,21 @@ export const fetchCountriesReducer = (state = initialState, action: ActionTypes)
 
       return {
         ...state,
-        countries: sortedCountriesTwo,
+        countries: sortedCountriesByPop,
       }
 
     case actions.SORT_COUNTRIES_BY_REGION:
-      const orderByTwo = action.payload
-      const countriesThree = state.countries
-      const sortedCountriesThree = countriesThree.sort((a, b) => {
+      const orderByRegion = action.payload
+      const countriesByRegion = state.countries
+      const sortedCountriesByRegion = countriesByRegion.sort((a, b) => {
         if (a.region > b.region) {
-          if (orderByTwo === "asc") {
+          if (orderByRegion === "asc") {
             return 1
           }
           return -1
         }
         if (b.region > a.region) {
-          if (orderByTwo === "asc") {
+          if (orderByRegion === "asc") {
             return -1
           }
           return 1
@@ -100,7 +99,7 @@ export const fetchCountriesReducer = (state = initialState, action: ActionTypes)
 
       return {
         ...state,
-        countries: sortedCountriesThree,
+        countries: sortedCountriesByRegion,
       }
 
     default:
