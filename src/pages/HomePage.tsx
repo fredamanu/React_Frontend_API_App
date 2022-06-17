@@ -18,7 +18,7 @@ export default function HomePage() {
   const { countries, error, loading } = useSelector(
     (state: State) => state.fetchCountriesReducer
   )
-  const keyword = useSelector((state: State) => state.searchTermReducer.keywordTable)
+  const keyword = useSelector((state: State) => state.searchTermReducer.keyword)
 
   const filterCountries = countries?.filter((country) => {
     return country.name.common.toLowerCase().includes(keyword.toLowerCase())

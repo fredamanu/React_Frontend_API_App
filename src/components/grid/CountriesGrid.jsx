@@ -12,7 +12,7 @@ import "./grid.css"
 export default function CountriesGrid() {
   const { dark } = React.useContext(ThemeContext)
   const dispatch = useDispatch()
-  const keyword = useSelector((state) => state.searchTermReducer.keywordGrid)
+  const keyword = useSelector((state) => state.searchTermReducer.keyword)
   const state = useSelector((state) => state)
   const countries = state.fetchCountriesReducer.countries
 

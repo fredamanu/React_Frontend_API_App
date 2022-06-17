@@ -10,8 +10,7 @@ export type ActionTypes =
     | {type: typeof actions.ADD_FAVORITE_COUNTRY, payload: FavoriteCountry}
     | {type: typeof actions.REMOVE_FAVORITE_COUNTRY, payload: FavoriteCountry}
     | {type: typeof actions.GET_SELECTED_COUNTRY, payload: string}
-    | {type: typeof actions.SET_SEARCHTERM_COUNTRIES_TABLE, payload: string}
-    | {type: typeof actions.SET_SEARCHTERM_COUNTRIES_GRID, payload: string}
+    | {type: typeof actions.SET_SEARCHTERM, payload: string}
     | {type: typeof actions.SORT_COUNTRIES_BY_NAME, payload: any}
     | {type: typeof actions.SORT_COUNTRIES_BY_POPULATION, payload: any}
     | {type: typeof actions.SORT_COUNTRIES_BY_REGION, payload: any}
@@ -76,8 +75,7 @@ export type FavoriteCountriesReducerInitialState = {
 export type State = {
     fetchCountriesReducer: FetchCountriesReducerInitialState,
     searchTermReducer: {
-        keywordTable: string,
-        keywordGrid: string
+        keyword: string
     },
     fetchCountryReducer: FetchCountryReducerInitialState,
     favoriteCountriesReducer: FavoriteCountriesReducerInitialState,

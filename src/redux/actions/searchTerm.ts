@@ -1,11 +1,8 @@
 import * as actions from "./types"
 
-export const setSearchTermOne = (keyword: string) => ({
-  type: actions.SET_SEARCHTERM_COUNTRIES_TABLE,
+export const setSearchTerm = (keyword: string) => ({
+  type: actions.SET_SEARCHTERM,
   payload: keyword,
 })
 
-export const setSearchTermTwo = (keyword: string) => ({
-  type: actions.SET_SEARCHTERM_COUNTRIES_GRID,
-  payload: keyword,
-})
+

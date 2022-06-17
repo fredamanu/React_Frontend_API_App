@@ -4,7 +4,7 @@ import InputBase from "@mui/material/InputBase"
 import IconButton from "@mui/material/IconButton"
 import SearchIcon from "@mui/icons-material/Search"
 
-import { setSearchTermOne } from "../../redux/actions/searchTerm"
+import { setSearchTerm } from "../../redux/actions/searchTerm"
 import { ThemeContext } from "../../ThemeContext"
 import "./searchbar.css"
 
@@ -13,7 +13,7 @@ export default function SearchBar() {
   const dispatch = useDispatch()
 
   const handleSearch = (e: any) => {
-    dispatch(setSearchTermOne(e.target.value))
+    dispatch(setSearchTerm(e.target.value))
   }
 
   return (
