@@ -1,12 +1,12 @@
-import React from "react"
+import React, { useState } from "react"
 import Popover from "@mui/material/Popover"
 import IconButton from "@mui/material/IconButton"
 import SearchIcon from "@mui/icons-material/Search"
 
-import CountriesGrid from "../grid/CountriesGrid"
+import CountriesGrid from "../countriesGrid/CountriesGrid"
 
-export default function PopOver() {
-  const [anchorEl, setAnchorEl] = React.useState(null)
+export default function CountriesPopOver() {
+  const [anchorEl, setAnchorEl] = useState(null)
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget)

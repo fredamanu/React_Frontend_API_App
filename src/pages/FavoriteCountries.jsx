@@ -2,10 +2,10 @@ import React, { useContext } from "react"
 import { useSelector } from "react-redux"
 
 import Globe from "../components/globe/Globe"
-import MainHeadingOne from "../components/mainHeadingOne/MainHeading"
+import Heading from "../components/Heading/Heading"
 import ContentOne from "../components/contentOne/ContentOne"
 import FavoriteGrid from "../components/grid/FavoriteGrid"
-import FavHero from "../components/favhero/FavHero"
+import MainSearchField from "../components/searchField/mainSearchField/MainSearchField"
 import Footer from "../components/footer/Footer"
 import { ThemeContext } from "../ThemeContext"
 import MainNavBar from "../components/navbar/mainNav/MainNavBar"
@@ -23,10 +23,10 @@ export default function FavoriteCountries() {
       }}
     >
       <MainNavBar />
-      <MainHeadingOne />
+      <Heading />
       {count > 0 ? (
         <div>
-          <FavHero />
+          <MainSearchField />
           <FavoriteGrid />
         </div>
       ) : (

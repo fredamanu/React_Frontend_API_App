@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+.countries-grid-container {
+  margin-top: 6rem;
+}
+
+.countries-grid-item-container {
+  background-color: #f0f0f0;
+  height: 220px;
+  width: 220px;
+}
+
+.countries-grid-item-container-dark {
+  background-color: #354556;
+  height: 220px;
+  width: 220px;
+}
+
+.countries-icon-container {
+  padding-top: 5px;
+  margin-left: 80%;
+}
+
+.countries-icon {
+  font-weight: bolder;
+  font-size: 3em;
+  cursor: pointer;
+}
+
+.countries-flag-name-container {
+  text-align: center;
+}
+
+.countries-flag-container {
+  width: 220px;
+  height: 150px;
+  text-align: center;
+}
+
+.countries-flag {
+  width: 70%;
+  height: 80%;
+  margin-top: 10px;
+}
+
+.countries-name {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-family: "montserrat";
+  letter-spacing: 2px;
+}
+
+.countries-name-dark {
+  color: rgb(222, 217, 217);
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-family: "montserrat";
+  letter-spacing: 2px;
+}
