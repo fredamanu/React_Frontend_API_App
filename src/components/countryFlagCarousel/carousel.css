@@ -1,0 +1,25 @@
+.carousel-container {
+  height: 100px;
+  width: 35%;
+  margin: 0 auto;
+}
+
+.carousel {
+  height: 100%;
+}
+.carousel-item {
+  height: 400px;
+  position: relative;
+}
+img {
+  height: 100%;
+  width: 50%;
+}
+
+.carousel-control-next-icon {
+  display: none;
+}
+
+.carousel-control-prev-icon {
+  display: none;
+}
