@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
 
-import CardBody from "../components/card/Card"
+import MainCountryCard from "../components/countryCard/mainCountryCard/MainCountryCard"
 import Footer from "../components/footer/Footer"
 import LoadingIcon from "../components/loadingIcon/LoadingIcon"
 import MainNavBar from "../components/navbar/mainNavbar/MainNavBar"
@@ -34,7 +34,7 @@ export default function CountryPage() {
       }}
     >
       <MainNavBar />
-      {loading ? <LoadingIcon /> : <CardBody />}
+      {loading ? <LoadingIcon /> : <MainCountryCard />}
       <Footer />
     </div>
   )

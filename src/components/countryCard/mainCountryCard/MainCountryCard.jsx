@@ -1,24 +1,21 @@
 import React from "react"
 import { useSelector } from "react-redux"
 
-import CountryButtons from "../countryButtons/CountryButtons"
-import MyCarousel from "../carousel/MyCarousel"
-import FunFacts from "../fun-facts/FunFacts"
-import "./card.css"
+import CountryButtons from "../../countryButtons/CountryButtons"
+import CountryFlagCarousel from "../countryFlagCarousel/CountryFlagCarousel"
+import FunFacts from "../../fun-facts/FunFacts"
+import "./main-countrycard.css"
 
-export default function CardBody() {
-  const state = useSelector((state) => state)
-  const country = state.fetchCountryReducer.country
+export default function MainCountryCard() {
+  const selectedCountry = useSelector(
+    (state) => state.getSelectedCountryReducer.selectedCountry
+  )
 
   return (
     <div className="hero-container">
-      <h1>
-        {country.map((c) => {
-          return c.name.common
-        })}
-      </h1>
+      <h1>{selectedCountry}</h1>
       <div className="hero">
-        <MyCarousel />
+        <CountryFlagCarousel />
         <div className="text">
           <FunFacts />
           <hr />
