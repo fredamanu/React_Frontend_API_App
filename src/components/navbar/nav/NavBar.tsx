@@ -4,7 +4,7 @@ import HomeIcon from "@mui/icons-material/Home"
 
 import { ThemeContext } from "../../../ThemeContext"
 import MySwitch from "../switch/MySwitch"
-import CountFavorites from "../count/CountFavorites"
+import CountFavorites from "../countFavorites/CountFavorites"
 import "./navbar.css"
 
 
