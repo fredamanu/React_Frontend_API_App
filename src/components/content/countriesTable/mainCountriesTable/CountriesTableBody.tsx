@@ -27,12 +27,12 @@ const CountriesTableBody: React.FC<Props> = ({ data, page, rowsPerPage }) =>{
       country.name.common.length > 15
         ? country.name.common.slice(0, 15) + "..."
         : country.name.common
-    const obj = {
+    const favoriteCountry = {
       name: newName,
       fullname: country.name.common,
       flag: country.flags.png,
     }
-    dispatch(addFavoriteCountry(obj))
+    dispatch(addFavoriteCountry(favoriteCountry))
   }
 
   return (

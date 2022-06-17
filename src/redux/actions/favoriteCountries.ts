@@ -1,12 +1,12 @@
 import * as actions from "./types"
 import { FavoriteCountry } from "../../typescript/types"
 
-export const addFavoriteCountry = (obj:FavoriteCountry) => ({
+export const addFavoriteCountry = (favoriteCountry:FavoriteCountry) => ({
   type: actions.ADD_FAVORITE_COUNTRY,
-  payload: obj,
+  payload: favoriteCountry,
 })
 
-export const removeFavoriteCountry = (obj: FavoriteCountry) => ({
+export const removeFavoriteCountry = (favoriteCountry: FavoriteCountry) => ({
   type: actions.REMOVE_FAVORITE_COUNTRY,
-  payload: obj,
+  payload: favoriteCountry,
 })
