@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
 
-import MainCountryCard from "../components/countryCard/mainCountryCard/MainCountryCard"
+import MainCountryCard from "../components/content/countryCard/mainCountryCard/MainCountryCard"
 import Footer from "../components/footer/Footer"
 import LoadingIcon from "../components/content/loadingIcon/LoadingIcon"
 import MainNavBar from "../components/navbar/mainNavbar/MainNavBar"

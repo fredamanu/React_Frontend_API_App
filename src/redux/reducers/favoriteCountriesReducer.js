@@ -9,8 +9,8 @@ const initialState = {
 export const favoriteCountriesReducer = (state = initialState, action) => {
   switch (action.type) {
     case actions.ADD_FAVORITE_COUNTRY:
-      const isDuplicate = state.favoriteCountries.some((obj) => {
-        return obj.name === action.payload.name
+      const isDuplicate = state.favoriteCountries.some((favoriteCountry) => {
+        return favoriteCountry.name === action.payload.name
       })
       if (isDuplicate) {
         toast.info(`${action.payload.name} already in list`, {
@@ -19,9 +19,12 @@ export const favoriteCountriesReducer = (state = initialState, action) => {
         return state
       }
 
-      const favoriteCountry = action.payload
-      const newFavoriteCountries = [favoriteCountry, ...state.favoriteCountries]
-      toast.success(`${favoriteCountry.name} added to list`, {
+      const favoriteCountryToAdd = action.payload
+      const newFavoriteCountries = [
+        favoriteCountryToAdd,
+        ...state.favoriteCountries,
+      ]
+      toast.success(`${favoriteCountryToAdd.name} added to list`, {
         position: "bottom-left",
       })
       return {
@@ -31,7 +34,7 @@ export const favoriteCountriesReducer = (state = initialState, action) => {
       }
 
     case actions.REMOVE_FAVORITE_COUNTRY:
-      const newFavCountry = state.favoriteCountries.filter((country) => {
+      const newFavCountries = state.favoriteCountries.filter((country) => {
         return country.fullname !== action.payload.fullname
       })
       toast.warning(`${action.payload.name} removed from list`, {
@@ -39,7 +42,7 @@ export const favoriteCountriesReducer = (state = initialState, action) => {
       })
       return {
         ...state,
-        favoriteCountries: newFavCountry,
+        favoriteCountries: newFavCountries,
         count: state.count - 1,
       }
 

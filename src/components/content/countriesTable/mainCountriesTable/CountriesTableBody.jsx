@@ -7,6 +7,7 @@ import FavoriteSharpIcon from "@mui/icons-material/FavoriteSharp"
 
 import { addFavoriteCountry } from "../../../../redux/actions/favoriteCountries"
 import "./main-table.css"
+import CountryFlagCarousel from "../../countryCard/countryFlagCarousel/CountryFlagCarousel"
 
 export default function CountriesTableBody({ data, page, rowsPerPage, dark }) {
   const dispatch = useDispatch()
@@ -14,54 +15,59 @@ export default function CountriesTableBody({ data, page, rowsPerPage, dark }) {
     align: "left",
   }
 
-  const handleCountClick = (row) => {
+  const handleCountClick = (country) => {
     const newName =
-      row.name.common.length > 15
-        ? row.name.common.slice(0, 15) + "..."
-        : row.name.common
-    const obj = {
+      country.name.common.length > 15
+        ? country.name.common.slice(0, 15) + "..."
+        : CountryFlagCarousel.name.common
+    const favoriteCountry = {
       name: newName,
-      fullname: row.name.common,
-      flag: row.flags.png,
+      fullname: country.name.common,
+      flag: country.flags.png,
     }
-    dispatch(addFavoriteCountry(obj))
+    dispatch(addFavoriteCountry(favoriteCountry))
   }
 
   return (
     <TableBody>
       {data
         .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-        .map((row) => {
+        .map((country) => {
           return (
-            <TableRow hover role="checkbox" tabIndex={-1} key={row.name.common}>
-              <TableCell sx={{ fontSize: 100 }}>{row.flag}</TableCell>
+            <TableRow
+              hover
+              role="checkbox"
+              tabIndex={-1}
+              key={country.name.common}
+            >
+              <TableCell sx={{ fontSize: 100 }}>{country.flag}</TableCell>
               <TableCell align={style.align}>
                 <Link
                   className={dark ? "a-dark" : "a-light"}
-                  to={{ pathname: `/country/${row.name.common}` }}
+                  to={{ pathname: `/country/${country.name.common}` }}
                 >
-                  {row.name.common}
+                  {country.name.common}
                 </Link>
               </TableCell>
               <TableCell
                 align={style.align}
                 sx={{ color: dark ? "#fff" : "#inherit" }}
               >
-                {row.population.toLocaleString("en-US")}
+                {country.population.toLocaleString("en-US")}
               </TableCell>
               <TableCell
                 align={style.align}
                 sx={{ color: dark ? "#fff" : "inherit" }}
               >
-                {row.region}
+                {country.region}
               </TableCell>
               <TableCell
                 align={style.align}
                 sx={{ color: dark ? "#fff" : "inherit" }}
               >
                 <ul>
-                  {row.languages
-                    ? Object.values(row.languages).map((lang) => {
+                  {country.languages
+                    ? Object.values(country.languages).map((lang) => {
                         return (
                           <li key={lang} align={style.align}>
                             {lang}
@@ -75,7 +81,7 @@ export default function CountriesTableBody({ data, page, rowsPerPage, dark }) {
                 <FavoriteSharpIcon
                   className={dark ? "favIcon-dark" : "favIcon"}
                   sx={{ fontSize: 40 }}
-                  onClick={() => handleCountClick(row)}
+                  onClick={() => handleCountClick(country)}
                 />
               </TableCell>
             </TableRow>
