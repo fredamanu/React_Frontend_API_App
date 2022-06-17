@@ -1,15 +1,15 @@
-import React, { useContext, useEffect } from "react"
+import { useContext, useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 
 import Footer from "../components/footer/Footer"
 import LoadingIcon from "../components/loadingIcon/LoadingIcon"
 import MyTable from "../components/table/MyTable"
-import NavBar from "../components/navbar/nav/NavBar"
+import MainNavBar from "../components/navbar/mainNav/MainNavBar"
 import { fetchCountries } from "../redux/actions/fetchCountries"
 import { ThemeContext } from "../ThemeContext"
 import SortTable from "../components/sort/SortTable"
 import SearchBar from "../components/searchbar/SeachBar"
-import HomeHero from "../components/homehero/HomeHero"
+import MainHero from "../components/hero/mainHero/MainHero"
 import { State } from "../typescript/types"
 
 export default function HomePage() {
@@ -32,8 +32,8 @@ export default function HomePage() {
 
   return (
     <div style={{ backgroundColor: dark ? "#435b71" : "#fff" }}>
-      <NavBar />
-      <HomeHero />
+      <MainNavBar />
+      <MainHero />
       {loading ? (
         <LoadingIcon />
       ) : (

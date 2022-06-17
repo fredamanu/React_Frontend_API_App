@@ -8,7 +8,7 @@ import CountFavorites from "../countFavorites/CountFavorites"
 import "./navbar.css"
 
 
-export default function NavBar() {
+export default function MainNavBar() {
   const navigate = useNavigate()
   const { dark } = useContext(ThemeContext)
 

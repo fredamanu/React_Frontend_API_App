@@ -1,14 +1,12 @@
 import React, { useContext } from "react"
 import Phone from "../phone/Phone"
-import { ThemeContext } from "../../ThemeContext"
+import { ThemeContext } from "../../../ThemeContext"
 
-import "./homehero.css"
+import "./main-hero.css"
 
-
-export default function HomeHero() {
+export default function MainHero() {
   const { dark } = useContext(ThemeContext)
   
-
   return (
     <div className={dark ? "homehero-container-dark" : "homehero-container"}>
       <h1 className={dark ? "hero-heading-dark" : "hero-heading"}>
