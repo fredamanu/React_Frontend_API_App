@@ -1,7 +1,11 @@
-.carousel {
+.carousel-container {
   height: 400px;
   width: 35%;
   margin: 0 auto;
+}
+
+.carousel {
+  width: 100%;
 }
 
 .carousel-item {
