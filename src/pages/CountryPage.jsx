@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom"
 
 import MainCountryCard from "../components/countryCard/mainCountryCard/MainCountryCard"
 import Footer from "../components/footer/Footer"
-import LoadingIcon from "../components/loadingIcon/LoadingIcon"
+import LoadingIcon from "../components/content/loadingIcon/LoadingIcon"
 import MainNavBar from "../components/navbar/mainNavbar/MainNavBar"
 import { fetchCountry } from "../redux/actions/fetchCountry"
 import { getSelectedCountry } from "../redux/actions/getSelectedCountry"

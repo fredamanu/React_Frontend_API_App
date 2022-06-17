@@ -4,9 +4,9 @@ import { useDispatch, useSelector } from "react-redux"
 import Grid from "@mui/material/Grid"
 import ClearIcon from "@mui/icons-material/Clear"
 
-import { removeFavoriteCountry } from "../../redux/actions/favoriteCountries"
-import { getSelectedCountry } from "../../redux/actions/getSelectedCountry"
-import { ThemeContext } from "../../ThemeContext"
+import { removeFavoriteCountry } from "../../../redux/actions/favoriteCountries"
+import { getSelectedCountry } from "../../../redux/actions/getSelectedCountry"
+import { ThemeContext } from "../../../ThemeContext"
 import "./grid.css"
 
 export default function FavoriteCountriesGrid() {

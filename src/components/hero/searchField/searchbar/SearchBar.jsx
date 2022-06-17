@@ -4,8 +4,8 @@ import Paper from "@mui/material/Paper"
 import InputBase from "@mui/material/InputBase"
 
 import CountriesPopOver from "../countriesPopover/CountriesPopOver"
-import { setSearchTerm } from "../../../redux/actions/searchTerm"
-import { ThemeContext } from "../../../ThemeContext"
+import { setSearchTerm } from "../../../../redux/actions/searchTerm"
+import { ThemeContext } from "../../../../ThemeContext"
 
 export default function SearchBar() {
   const dispatch = useDispatch()

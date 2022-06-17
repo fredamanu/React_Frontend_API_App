@@ -5,7 +5,7 @@ import TablePagination from "@mui/material/TablePagination"
 
 import CountriesTableHead from "./CountriesTableHead"
 import CountriesTableBody from "./CountriesTableBody"
-import { ThemeContext } from "../../../ThemeContext"
+import { ThemeContext } from "../../../../ThemeContext"
 import "./main-table.css"
 
 const columns = [

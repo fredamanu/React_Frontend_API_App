@@ -5,7 +5,7 @@ import TableCell from "@mui/material/TableCell"
 import TableRow from "@mui/material/TableRow"
 import FavoriteSharpIcon from "@mui/icons-material/FavoriteSharp"
 
-import { addFavoriteCountry } from "../../../redux/actions/favoriteCountries"
+import { addFavoriteCountry } from "../../../../redux/actions/favoriteCountries"
 import "./main-table.css"
 
 export default function CountriesTableBody({ data, page, rowsPerPage, dark }) {
