@@ -2,9 +2,9 @@ import { useContext } from "react"
 import Phone from "../phone/Phone"
 import { ThemeContext } from "../../../ThemeContext"
 
-import "./hero-main.css"
+import "./main-hero.css"
 
-export default function HeroMain() {
+export default function MainHero() {
   const { dark } = useContext(ThemeContext)
 
   return (

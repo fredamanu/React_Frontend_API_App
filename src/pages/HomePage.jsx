@@ -3,13 +3,13 @@ import { useDispatch, useSelector } from "react-redux"
 
 import Footer from "../components/footer/Footer"
 import LoadingIcon from "../components/loadingIcon/LoadingIcon"
-import MyTable from "../components/table/MyTable.jsx"
-import NavBar from "../components/navbar/nav/NavBar"
+import MainCountriesTable from "../components/mainCountriesTable/MainCountriesTable.jsx"
+import MainNavBar from "../components/navbar/mainNavbar/MainNavBar"
 import { fetchCountries } from "../redux/actions/fetchCountries"
 import { ThemeContext } from "../ThemeContext"
 import SortTable from "../components/sort/SortTable"
 import SearchBar from "../components/searchbar/SeachBar"
-import HeroMain from "../components/hero/heroMain/HeroMain"
+import MainHero from "../components/hero/mainHero/MainHero"
 
 export default function HomePage() {
   const { dark } = useContext(ThemeContext)
@@ -32,15 +32,15 @@ export default function HomePage() {
 
   return (
     <div style={{ backgroundColor: dark ? "#435b71" : "#fff" }}>
-      <NavBar />
-      <HeroMain />
+      <MainNavBar />
+      <MainHero />
       {loading ? (
         <LoadingIcon />
       ) : (
         <div style={{ backgroundColor: dark ? "#435b71" : "#fff" }}>
           <SearchBar />
           <SortTable />
-          <MyTable data={filterCountries} />
+          <MainCountriesTable data={filterCountries} />
         </div>
       )}
       <Footer />

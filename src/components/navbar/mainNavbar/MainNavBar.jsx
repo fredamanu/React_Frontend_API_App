@@ -5,9 +5,9 @@ import MySwitch from "../switch/MySwitch"
 import HomeIcon from "@mui/icons-material/Home"
 import CountFavorites from "../countFavorites/CountFavorites"
 import { ThemeContext } from "../../../ThemeContext"
-import "./navbar.css"
+import "./main-navbar.css"
 
-export default function NavBar() {
+export default function MainNavBar() {
   const navigate = useNavigate()
   const { dark } = useContext(ThemeContext)
 

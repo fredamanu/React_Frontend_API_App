@@ -6,9 +6,9 @@ import TableRow from "@mui/material/TableRow"
 import FavoriteSharpIcon from "@mui/icons-material/FavoriteSharp"
 
 import { addFavoriteCountry } from "../../redux/actions/favoriteCountries"
-import "./mytable.css"
+import "./main-table.css"
 
-export default function Tbody({ data, page, rowsPerPage, dark }) {
+export default function CountriesTableBody({ data, page, rowsPerPage, dark }) {
   const dispatch = useDispatch()
   const style = {
     align: "left",

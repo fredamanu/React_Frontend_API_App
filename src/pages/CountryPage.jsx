@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom"
 import CardBody from "../components/card/Card"
 import Footer from "../components/footer/Footer"
 import LoadingIcon from "../components/loadingIcon/LoadingIcon"
-import NavBar from "../components/navbar/nav/NavBar"
+import MainNavBar from "../components/navbar/mainNavbar/MainNavBar"
 import { fetchCountry } from "../redux/actions/fetchCountry"
 import { getSelectedCountry } from "../redux/actions/getSelectedCountry"
 import { ThemeContext } from "../ThemeContext"
@@ -33,7 +33,7 @@ export default function CountryPage() {
         color: dark ? "#fff" : "inherit",
       }}
     >
-      <NavBar />
+      <MainNavBar />
       {loading ? <LoadingIcon /> : <CardBody />}
       <Footer />
     </div>

@@ -8,7 +8,7 @@ import FavoriteGrid from "../components/grid/FavoriteGrid"
 import FavHero from "../components/favhero/FavHero"
 import Footer from "../components/footer/Footer"
 import { ThemeContext } from "../ThemeContext"
-import NavBar from "../components/navbar/nav/NavBar"
+import MainNavBar from "../components/navbar/mainNavbar/MainNavBar"
 
 export default function FavoriteCountries() {
   const { dark } = useContext(ThemeContext)
@@ -22,7 +22,7 @@ export default function FavoriteCountries() {
         color: dark ? "#fff" : "inherit",
       }}
     >
-      <NavBar />
+      <MainNavBar />
       <MainHeadingOne />
       {count > 0 ? (
         <div>
