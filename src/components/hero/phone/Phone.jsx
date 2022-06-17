@@ -1,5 +1,3 @@
-import React from "react"
-
 import "./phone.css"
 
 export default function Phone() {

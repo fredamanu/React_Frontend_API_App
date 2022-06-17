@@ -9,7 +9,7 @@ import { fetchCountries } from "../redux/actions/fetchCountries"
 import { ThemeContext } from "../ThemeContext"
 import SortTable from "../components/sort/SortTable"
 import SearchBar from "../components/searchbar/SeachBar"
-import HomeHero from "../components/homehero/HomeHero"
+import HeroMain from "../components/hero/heroMain/HeroMain"
 
 export default function HomePage() {
   const { dark } = useContext(ThemeContext)
@@ -33,7 +33,7 @@ export default function HomePage() {
   return (
     <div style={{ backgroundColor: dark ? "#435b71" : "#fff" }}>
       <NavBar />
-      <HomeHero />
+      <HeroMain />
       {loading ? (
         <LoadingIcon />
       ) : (
