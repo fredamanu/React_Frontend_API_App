@@ -1,15 +1,15 @@
-import * as React from "react"
+import React, { useContext } from "react"
 import { useDispatch } from "react-redux"
 import InputBase from "@mui/material/InputBase"
 import IconButton from "@mui/material/IconButton"
 import SearchIcon from "@mui/icons-material/Search"
 
-import { setSearchTerm } from "../../redux/actions/searchTerm"
-import { ThemeContext } from "../../ThemeContext"
+import { setSearchTerm } from "../../../redux/actions/searchTerm"
+import { ThemeContext } from "../../../ThemeContext"
 import "./searchbar.css"
 
 export default function SearchBar() {
-  const { dark } = React.useContext(ThemeContext)
+  const { dark } = useContext(ThemeContext)
   const dispatch = useDispatch()
 
   const handleSearch = (e) => {

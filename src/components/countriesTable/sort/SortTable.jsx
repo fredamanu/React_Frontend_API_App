@@ -9,8 +9,8 @@ import {
   sortCountriesByName,
   sortCountriesByPopulation,
   sortCountriesByRegion,
-} from "../../redux/actions/sortCountries"
-import { ThemeContext } from "../../ThemeContext"
+} from "../../../redux/actions/sortCountries"
+import { ThemeContext } from "../../../ThemeContext"
 import "./sort.css"
 
 export default function SortTable() {

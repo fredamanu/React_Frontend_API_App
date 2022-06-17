@@ -3,12 +3,12 @@ import { useDispatch, useSelector } from "react-redux"
 
 import Footer from "../components/footer/Footer"
 import LoadingIcon from "../components/loadingIcon/LoadingIcon"
-import MainCountriesTable from "../components/mainCountriesTable/MainCountriesTable.jsx"
+import MainCountriesTable from "../components/countriesTable/mainCountriesTable/MainCountriesTable.jsx"
 import MainNavBar from "../components/navbar/mainNavbar/MainNavBar"
 import { fetchCountries } from "../redux/actions/fetchCountries"
 import { ThemeContext } from "../ThemeContext"
-import SortTable from "../components/sort/SortTable"
-import SearchBar from "../components/searchbar/SeachBar"
+import SortTable from "../components/countriesTable/sort/SortTable"
+import SearchBar from "../components/countriesTable/searchbar/SeachBar"
 import MainHero from "../components/hero/mainHero/MainHero"
 
 export default function HomePage() {
