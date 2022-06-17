@@ -1,10 +1,10 @@
-import React, { useContext } from "react"
+import { useContext } from "react"
 import FormGroup from "@mui/material/FormGroup"
 import FormControlLabel from "@mui/material/FormControlLabel"
 
 import { styled } from "@mui/material/styles"
 import Switch from "@mui/material/Switch"
-import { ThemeContext } from "../../ThemeContext"
+import { ThemeContext } from "../../../ThemeContext"
 import "./myswitch.css"
 
 export default function MySwitch() {

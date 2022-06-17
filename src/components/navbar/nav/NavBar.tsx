@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import { useNavigate } from "react-router-dom"
 import HomeIcon from "@mui/icons-material/Home"
 
-import { ThemeContext } from "../../ThemeContext"
+import { ThemeContext } from "../../../ThemeContext"
 import MySwitch from "../switch/MySwitch"
 import CountFavorites from "../count/CountFavorites"
 import "./navbar.css"

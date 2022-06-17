@@ -6,7 +6,7 @@ import { getSelectedCountry } from "../redux/actions/getSelectedCountry.ts"
 import CardBody from "../components/card/Card"
 import Footer from "../components/footer/Footer"
 import LoadingIcon from "../components/loadingIcon/LoadingIcon"
-import NavBar from "../components/navbar/NavBar"
+import NavBar from "../components/navbar/nav/NavBar"
 import { fetchCountry } from "../redux/actions/fetchCountry.ts"
 import { ThemeContext } from "../ThemeContext"
 
