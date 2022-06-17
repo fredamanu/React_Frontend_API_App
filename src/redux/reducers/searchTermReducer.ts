@@ -2,23 +2,23 @@ import * as actions from "../actions/types"
 import { ActionTypes } from "../../typescript/types"
 
 const initialState = {
-  keywordOne: "",
-  keywordTwo: "",
+  keywordTable: "",
+  keywordGrid: "",
 }
 
 export const searchTermReducer = (state = initialState, action: ActionTypes) => {
   switch (action.type) {
-    case actions.SET_SEARCHTERM_ONE:
+    case actions.SET_SEARCHTERM_COUNTRIES_TABLE:
       return {
         ...state,
-        keywordOne: action.payload,
-        keywordTwo: "",
+        keywordTable: action.payload,
+        keywordGrid: "",
       }
-    case actions.SET_SEARCHTERM_TWO:
+    case actions.SET_SEARCHTERM_COUNTRIES_GRID:
       return {
         ...state,
-        keywordTwo: action.payload,
-        keywordOne: "",
+        keywordGrid: action.payload,
+        keywordTable: "",
       }
     default:
       return state
