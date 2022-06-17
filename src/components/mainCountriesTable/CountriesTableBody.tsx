@@ -9,7 +9,7 @@ import { addFavoriteCountry } from "../../redux/actions/favoriteCountries"
 import {Country} from "../../typescript/types"
 import { useContext } from "react"
 import { ThemeContext } from "../../ThemeContext"
-import "./mytable.css"
+import "./main-table.css"
 
 type Props = {
   data: Country[],
@@ -17,7 +17,7 @@ type Props = {
   rowsPerPage: number
 }
 
-const MyTableBody: React.FC<Props> = ({ data, page, rowsPerPage }) =>{
+const CountriesTableBody: React.FC<Props> = ({ data, page, rowsPerPage }) =>{
   const { dark } = useContext(ThemeContext)
   const dispatch = useDispatch()
  
@@ -97,4 +97,4 @@ const MyTableBody: React.FC<Props> = ({ data, page, rowsPerPage }) =>{
 }
 
 
-export default MyTableBody
+export default CountriesTableBody

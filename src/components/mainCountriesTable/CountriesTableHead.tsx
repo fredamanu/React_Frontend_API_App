@@ -19,7 +19,7 @@ type Props = {
 })[]
 }
 
- const MyTableHead: React.FC<Props> = ({ columns })=> {
+ const CountriesTableHead: React.FC<Props> = ({ columns })=> {
   const { dark } = useContext(ThemeContext)
   return (
     <TableHead>
@@ -43,4 +43,4 @@ type Props = {
   )
 }
 
-export default MyTableHead
+export default CountriesTableHead

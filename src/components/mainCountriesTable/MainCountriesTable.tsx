@@ -3,11 +3,11 @@ import Table from "@mui/material/Table"
 import TableContainer from "@mui/material/TableContainer"
 import TablePagination from "@mui/material/TablePagination"
 
-import MyTableHead from "./MyTableHead"
-import MyTableBody from "./MyTableBody"
+import CountriesTableHead from "./CountriesTableHead"
+import CountriesTableBody from "./CountriesTableBody"
 import { ThemeContext } from "../../ThemeContext"
 import { Country } from "../../typescript/types"
-import "./mytable.css"
+import "./main-table.css"
 
 const columns = [
   {
@@ -52,7 +52,7 @@ type Props = {
 }
 
 
- const MyTable: React.FC<Props> = ({ data }) =>{
+ const MainCountriesTable: React.FC<Props> = ({ data }) =>{
   const { dark } = useContext(ThemeContext)
   const [page, setPage] = useState(0)
   const [rowsPerPage, setRowsPerPage] = useState(10)
@@ -77,8 +77,8 @@ type Props = {
     >
       <TableContainer sx={{ maxHeight: 550 }}>
         <Table stickyHeader aria-label="sticky table">
-          <MyTableHead columns={columns} />
-          <MyTableBody
+          <CountriesTableHead columns={columns} />
+          <CountriesTableBody
             data={data}
             page={page}
             rowsPerPage={rowsPerPage}
@@ -99,4 +99,4 @@ type Props = {
   )
 }
 
-export default MyTable
+export default MainCountriesTable

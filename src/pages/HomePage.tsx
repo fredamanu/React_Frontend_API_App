@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 
 import Footer from "../components/footer/Footer"
 import LoadingIcon from "../components/loadingIcon/LoadingIcon"
-import MyTable from "../components/table/MyTable"
+import MainCountriesTable from "../components/mainCountriesTable/MainCountriesTable"
 import MainNavBar from "../components/navbar/mainNav/MainNavBar"
 import { fetchCountries } from "../redux/actions/fetchCountries"
 import { ThemeContext } from "../ThemeContext"
@@ -40,7 +40,7 @@ export default function HomePage() {
         <div style={{ backgroundColor: dark ? "#435b71" : "#fff" }}>
           <SearchBar />
           <SortTable />
-          <MyTable data={filterCountries} />
+          <MainCountriesTable data={filterCountries} />
         </div>
       )}
       <Footer />
