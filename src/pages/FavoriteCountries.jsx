@@ -1,9 +1,9 @@
 import React, { useContext } from "react"
 import { useSelector } from "react-redux"
 
-import Globe from "../components/globe/Globe"
+import Globe from "../components/content/globe/Globe"
 import Heading from "../components/Heading/Heading"
-import ContentOne from "../components/contentOne/ContentOne"
+import ContentOne from "../components/content/mainContent/MainContent"
 import FavoriteCountriesGrid from "../components/favoriteCountriesGrid/FavoriteCountriesGrid"
 import MainSearchField from "../components/searchField/mainSearchField/MainSearchField"
 import Footer from "../components/footer/Footer"
