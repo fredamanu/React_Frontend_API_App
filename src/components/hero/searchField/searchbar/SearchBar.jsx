@@ -6,6 +6,7 @@ import InputBase from "@mui/material/InputBase"
 import CountriesPopOver from "../countriesPopover/CountriesPopOver"
 import { setSearchTerm } from "../../../../redux/actions/searchTerm"
 import { ThemeContext } from "../../../../ThemeContext"
+import "./searchbar.css"
 
 export default function SearchBar() {
   const dispatch = useDispatch()
@@ -25,6 +26,7 @@ export default function SearchBar() {
         display: "flex",
         alignItems: "center",
         width: "70%",
+        height: "70%",
         backgroundColor: dark ? "#F9F9F9" : "#fff",
         color: dark ? "#ccc" : "#fff",
       }}

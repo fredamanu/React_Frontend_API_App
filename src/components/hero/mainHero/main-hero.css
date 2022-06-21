@@ -12,13 +12,16 @@
 }
 
 .hero-heading {
+  /* background-color: red; */
   color: black;
   font-weight: 800;
-  margin: 0;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .hero-heading-dark {
   color: #fff;
   font-weight: 800;
-  margin: 0;
+  margin: 0 auto;
+  width: 80%;
 }

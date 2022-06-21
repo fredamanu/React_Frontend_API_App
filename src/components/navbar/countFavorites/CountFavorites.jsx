@@ -23,6 +23,7 @@ export default function CountFavorites() {
         <FavoriteIcon
           className={dark ? "fav-icon-main-dark" : "fav-icon-main"}
           onClick={handleClick}
+          sx={{ fontSize: 30 }}
         />
       </Badge>
     </div>

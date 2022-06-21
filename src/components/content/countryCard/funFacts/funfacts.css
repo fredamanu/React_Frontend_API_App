@@ -1,3 +1,10 @@
+@media screen and (max-width: 900px) {
+  .fun-facts-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+}
+
 p {
   line-height: 2;
   font-size: 1em;

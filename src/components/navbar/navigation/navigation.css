@@ -1,0 +1,43 @@
+.navlinks-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-navigation {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+}
+
+.hamMenu {
+  position: absolute;
+  right: 5%;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .mobile-navigation {
+    display: flex;
+  }
+  .navigation {
+    display: none;
+  }
+  .navlinks-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 100%;
+    background-color: #354556;
+    opacity: 0.8;
+    align-items: flex-start;
+    padding-left: 15%;
+    border-top: 2px solid #354556;
+  }
+}

@@ -1,0 +1,25 @@
+.home-icon {
+  color: black;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.home-icon-dark {
+  color: #fff;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.home-icon-dark:hover,
+.home-icon:hover {
+  color: grey;
+}
+
+@media screen and (max-width: 900px) {
+  .home-icon {
+    margin-bottom: 20px;
+  }
+  .home-icon-dark {
+    margin-bottom: 20px;
+  }
+}

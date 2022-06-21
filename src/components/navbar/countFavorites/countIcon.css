@@ -1,6 +1,6 @@
 .countIcon {
-  align-self: center;
-  margin-right: 10px;
+  /* align-self: center; */
+  margin-right: 30px;
 }
 
 .badge {
@@ -15,4 +15,18 @@
 .fav-icon-main-dark {
   color: #fff;
   cursor: pointer;
+}
+
+.fav-icon-main:hover,
+.fav-icon-main-dark:hover {
+  color: grey;
+}
+
+@media screen and (max-width: 900px) {
+  .fav-icon-main {
+    margin-bottom: 20px;
+  }
+  .fav-icon-main-dark {
+    margin-bottom: 20px;
+  }
 }

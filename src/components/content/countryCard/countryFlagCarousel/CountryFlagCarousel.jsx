@@ -9,10 +9,7 @@ export default function CountryFlagCarousel() {
   const country = state.fetchCountryReducer.country
 
   return (
-    <div
-      className="carousel-container"
-      style={{ height: "500px", width: "35%", margin: "0 auto" }}
-    >
+    <div className="carousel-container">
       {country.map((property) => {
         return (
           <Carousel

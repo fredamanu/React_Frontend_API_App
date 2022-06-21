@@ -1,16 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
 .fav-countries-container {
-  margin-top: 6rem;
   width: 670px;
-  margin: auto;
+  margin: 6rem auto;
 }
-
-/* .fav-countries-grid-container {
-  text-align: center;
-  width: 700px;
-  margin: auto;
-} */
 
 @media screen and (max-width: 898px) {
   .fav-countries-container {

@@ -1,3 +1,22 @@
-.switch-container {
-  align-self: center;
+.switchOff {
+  color: white;
+  font-size: 40px;
+}
+.switchOn {
+  color: black;
+  font-size: 40px;
+}
+
+.switchOff:hover,
+.switchOn:hover {
+  color: grey;
+}
+
+@media screen and (max-width: 900px) {
+  .switchOff {
+    margin-bottom: 20px;
+  }
+  .switchOn {
+    margin-bottom: 20px;
+  }
 }
