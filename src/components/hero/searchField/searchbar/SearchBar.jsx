@@ -24,7 +24,7 @@ export default function SearchBar() {
         p: "0px 1px",
         display: "flex",
         alignItems: "center",
-        width: 500,
+        width: "70%",
         backgroundColor: dark ? "#F9F9F9" : "#fff",
         color: dark ? "#ccc" : "#fff",
       }}

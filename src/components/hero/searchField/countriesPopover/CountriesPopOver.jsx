@@ -35,7 +35,7 @@ export default function CountriesPopOver() {
         anchorEl={anchorEl}
         onClose={handleClose}
         anchorOrigin={{
-          vertical: "center",
+          vertical: "bottom",
           horizontal: "left",
         }}
       >

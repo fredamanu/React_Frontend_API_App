@@ -22,19 +22,19 @@ export default function CountryButtons() {
   })
 
   const handleClick = () => {
-    const newObj = country[0]
+    const newCountry = country[0]
     const newName =
-      newObj.name.common.length > 15
-        ? newObj.name.common.slice(0, 15) + "..."
-        : newObj.name.common
-    const obj = {
+      newCountry.name.common.length > 15
+        ? newCountry.name.common.slice(0, 15) + "..."
+        : newCountry.name.common
+    const favoriteCountry = {
       name: newName,
-      fullname: newObj.name.common,
-      flag: newObj.flags.png,
+      fullname: newCountry.name.common,
+      flag: newCountry.flags.png,
     }
     isDuplicate
-      ? dispatch(removeFavoriteCountry(obj))
-      : dispatch(addFavoriteCountry(obj))
+      ? dispatch(removeFavoriteCountry(favoriteCountry))
+      : dispatch(addFavoriteCountry(favoriteCountry))
 
     navigate("/favoritecountries")
   }

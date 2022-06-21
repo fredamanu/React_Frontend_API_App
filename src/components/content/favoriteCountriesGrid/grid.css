@@ -2,6 +2,26 @@
 
 .fav-countries-container {
   margin-top: 6rem;
+  width: 670px;
+  margin: auto;
+}
+
+/* .fav-countries-grid-container {
+  text-align: center;
+  width: 700px;
+  margin: auto;
+} */
+
+@media screen and (max-width: 898px) {
+  .fav-countries-container {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 597px) {
+  .fav-countries-container {
+    width: 230px;
+  }
 }
 
 .grid-item-container {

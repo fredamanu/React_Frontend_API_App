@@ -7,7 +7,6 @@ import FavoriteSharpIcon from "@mui/icons-material/FavoriteSharp"
 
 import { addFavoriteCountry } from "../../../../redux/actions/favoriteCountries"
 import "./main-table.css"
-import CountryFlagCarousel from "../../countryCard/countryFlagCarousel/CountryFlagCarousel"
 
 export default function CountriesTableBody({ data, page, rowsPerPage, dark }) {
   const dispatch = useDispatch()
@@ -19,7 +18,7 @@ export default function CountriesTableBody({ data, page, rowsPerPage, dark }) {
     const newName =
       country.name.common.length > 15
         ? country.name.common.slice(0, 15) + "..."
-        : CountryFlagCarousel.name.common
+        : country.name.common
     const favoriteCountry = {
       name: newName,
       fullname: country.name.common,

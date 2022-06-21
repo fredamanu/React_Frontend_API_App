@@ -2,16 +2,23 @@
   background-color: #f0f0f0;
   padding: 10px 20px;
   margin: 60px auto;
-  height: 7rem;
-  width: 680px;
+  width: 670px;
 }
 
 .fav-hero-container-dark {
   background-color: #354556;
   padding: 10px 20px;
   margin: 60px auto;
-  height: 7rem;
-  width: 680px;
+  width: 670px;
+}
+
+@media screen and (max-width: 898px) {
+  .fav-hero-container-dark {
+    width: 450px;
+  }
+  .fav-hero-container {
+    width: 450px;
+  }
 }
 
 .fav-hero-text {
