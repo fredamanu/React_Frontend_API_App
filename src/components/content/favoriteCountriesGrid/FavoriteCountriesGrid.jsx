@@ -30,10 +30,10 @@ export default function FavoriteCountriesGrid() {
         justifyContent="center"
         rowSpacing={0.2}
         columnSpacing={{ xs: 0.2, sm: 0.2, md: 0.2 }}
-        style={{ width: 700, margin: "auto" }}
+        // style={{ width: 700, margin: "auto" }}
       >
         {list.map((item) => (
-          <Grid key={item.name} item xs={12} sm={4}>
+          <Grid key={item.fullname} item xs={12} sm={6} md={4}>
             <div
               className={
                 dark ? "grid-item-container-dark" : "grid-item-container"

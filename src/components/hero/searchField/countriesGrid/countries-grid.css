@@ -1,9 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
-.countries-grid-container {
-  margin-top: 6rem;
+.countries-container {
+  margin-top: 5rem;
+  width: 650px;
 }
 
+@media screen and (max-width: 898px) {
+  .countries-container {
+    width: 440px;
+  }
+}
+
+@media screen and (max-width: 597px) {
+  .countries-container {
+    width: 220px;
+  }
+}
 .countries-grid-item-container {
   background-color: #f0f0f0;
   height: 220px;

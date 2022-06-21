@@ -34,15 +34,15 @@ export default function CountriesGrid() {
   }
 
   return (
-    <div className=" countries-grid-container">
+    <div className=" countries-container">
       <Grid
         container
         justifyContent="center"
         rowSpacing={0.2}
         columnSpacing={{ xs: 0.2, sm: 0.2, md: 0.2 }}
         style={{
-          width: 665,
-          margin: "auto",
+          // width: 665,
+          // margin: "auto",
           backgroundColor: dark ? "#354556" : "#f0f0f0",
         }}
       >
@@ -50,7 +50,8 @@ export default function CountriesGrid() {
           <Grid
             item
             xs={12}
-            sm={4}
+            sm={6}
+            md={4}
             key={item.name.common}
             sx={{ backgroundColor: "#fff" }}
           >
