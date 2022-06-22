@@ -11,7 +11,7 @@ export default function MyCarousel() {
   return (
     <div
       className="carousel-container"
-      style={{ height: "500px", width: "35%", margin: "0 auto" }}
+      // style={{ height: "500px", width: "35%", margin: "0 auto" }}
     >
       {country.map((property) => {
         return (

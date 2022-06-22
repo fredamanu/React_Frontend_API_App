@@ -1,43 +1,29 @@
 .hero-container {
   width: 85%;
   margin: 30px auto;
-  height: 800px;
   text-align: center;
 }
 
 .hero {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
+@media screen and (max-width: 900px) {
+  .hero {
+    display: block;
+  }
+  .reaction {
+    text-align: center;
+  }
+}
+
 .text {
-  width: 30%;
+  width: 50%;
   align-self: center;
   margin: 0 auto;
   text-align: left;
-}
-.carousel {
-  height: 400px;
-  width: 35%;
-  margin: 0 auto;
-}
-
-.carousel-item {
-  height: 400px;
-  position: relative;
-}
-
-img {
-  height: 100%;
-  width: 50%;
-}
-
-.carousel-control-next-icon {
-  display: none;
-}
-
-.carousel-control-prev-icon {
-  display: none;
 }
 
 h1 {
@@ -47,11 +33,7 @@ h1 {
   letter-spacing: 5px;
 }
 
-p {
+.reaction {
   line-height: 2;
   font-size: 1em;
-}
-
-.fun-facts {
-  margin-left: 10px;
 }

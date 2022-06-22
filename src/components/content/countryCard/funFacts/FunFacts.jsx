@@ -8,7 +8,7 @@ export default function FunFacts() {
   const country = state.fetchCountryReducer.country
 
   return (
-    <div>
+    <div className="fun-facts-container">
       <h5>Fun Facts</h5>
       {country.map((property) => {
         const day = property.startOfWeek

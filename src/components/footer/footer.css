@@ -36,3 +36,10 @@
   margin: 0;
   font-size: 0.9em;
 }
+
+@media screen and (max-width: 900px) {
+  .copyright-text,
+  .copyright-text-dark {
+    font-size: 0.7em;
+  }
+}
