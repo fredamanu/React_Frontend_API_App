@@ -20,9 +20,8 @@ export default function MainCountryCard() {
           <FunFacts />
           <hr />
           <p>
-           Want to know more? Click on the right button below to find it on
-            google maps. You can also add to or remove it from your favorite
-            countries by clicking on the left button.
+            Want to know more? Click on the button below to find it on google
+            maps or click add button to add to your favorites.
           </p>
           <hr />
           <CountryButtons />
