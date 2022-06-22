@@ -19,9 +19,10 @@ export default function MainCountryCard() {
         <div className="text">
           <FunFacts />
           <hr />
-          <p>
-            Want to know more? Click on the button below to find it on google
-            maps or click add button to add to your favorites.
+          <p className="reaction">
+            Want to know more? Click on the right button below to find it on
+            google maps. You can also add to or remove it from your favorite
+            countries by clicking on the left button.
           </p>
           <hr />
           <CountryButtons />

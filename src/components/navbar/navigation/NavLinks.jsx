@@ -2,7 +2,7 @@ import React from "react"
 
 import NavHomeIcon from "../homeIcon/NavHomeIcon"
 import CountFavorites from "../countFavorites/CountFavorites"
-import MySwitch from "../switch/MySwitch"
+import ThemeSwitch from "../switch/ThemeSwitch"
 import "./navigation.css"
 
 export default function NavLinks() {
@@ -10,7 +10,7 @@ export default function NavLinks() {
     <div className="navlinks-container">
       <NavHomeIcon />
       <CountFavorites />
-      <MySwitch />
+      <ThemeSwitch />
     </div>
   )
 }

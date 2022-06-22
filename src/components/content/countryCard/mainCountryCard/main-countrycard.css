@@ -14,7 +14,7 @@
   .hero {
     display: block;
   }
-  p {
+  .reaction {
     text-align: center;
   }
 }
@@ -26,24 +26,6 @@
   text-align: left;
 }
 
-.carousel-item {
-  height: 400px;
-  position: relative;
-}
-
-img {
-  height: 100%;
-  width: 50%;
-}
-
-.carousel-control-next-icon {
-  display: none;
-}
-
-.carousel-control-prev-icon {
-  display: none;
-}
-
 h1 {
   font-size: 3em;
   font-weight: bolder;
@@ -51,7 +33,7 @@ h1 {
   letter-spacing: 5px;
 }
 
-p {
+.reaction {
   line-height: 2;
   font-size: 1em;
 }

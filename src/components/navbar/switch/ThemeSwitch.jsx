@@ -5,13 +5,12 @@ import ToggleOnIcon from "@mui/icons-material/ToggleOn"
 import { ThemeContext } from "../../../ThemeContext"
 import "./myswitch.css"
 
-export default function MySwitch() {
+export default function ThemeSwitch() {
   const { dark, setDark } = useContext(ThemeContext)
 
   const handleClick = () => {
-    // dark === null ? setDark("true") : setDark(null)
-    // localStorage.setItem("dark", dark)
     setDark(!dark)
+    localStorage.setItem("dark", !dark)
   }
 
   const toggleOff = (
