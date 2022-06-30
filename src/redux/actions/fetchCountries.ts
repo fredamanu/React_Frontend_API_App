@@ -1,6 +1,6 @@
 import * as actions from "./types"
 import axios from "axios"
-import {Country} from "../../typescript/types"
+import {Country} from "../../typescript"
 
 export const fetchCountriesRequest = () => ({
   type: actions.FETCH_COUNTRIES_REQUEST,

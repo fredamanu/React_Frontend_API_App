@@ -1,16 +1,16 @@
 import { combineReducers } from "redux"
-import { fetchCountriesReducer } from "./fetchCountriesReducer.ts"
-import { searchTermReducer } from "./searchTermReducer.ts"
-import { fetchCountryReducer } from "./fetchCountryReducer.ts"
-import { favoriteCountriesReducer } from "./favoriteCountriesReducer.ts"
-import { getSelectedCountryReducer } from "../reducers/getSelectedCountry.ts"
+import { countries } from "./countries.ts"
+import { searchTerm } from "./searchTerm.ts"
+import { country } from "./country.ts"
+import { favoriteCountries } from "./favoriteCountries.ts"
+import { selectedCountry } from "./selectedCountry.ts"
 
 const rootReducer = combineReducers({
-  fetchCountriesReducer,
-  searchTermReducer,
-  fetchCountryReducer,
-  favoriteCountriesReducer,
-  getSelectedCountryReducer,
+  countries,
+  searchTerm,
+  country,
+  favoriteCountries,
+  selectedCountry,
 })
 
 export default rootReducer

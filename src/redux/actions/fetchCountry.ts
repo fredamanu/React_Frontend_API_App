@@ -1,6 +1,6 @@
 import * as actions from "./types"
 import axios from "axios"
-import {Country} from "../../typescript/types"
+import {Country} from "../../typescript"
 
 export const fetchCountryRequest = () => ({
   type: actions.FETCH_COUNTRY_REQUEST,
@@ -24,7 +24,6 @@ export const fetchCountry = (selectedCountry: string) => {
       .get(url)
       .then((response) => {
         dispatch(fetchCountrySuccess(response.data))
-       
       })
       .catch((err) => {
         dispatch(fetchCountryFailure(err.message))

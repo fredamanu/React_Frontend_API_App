@@ -1,5 +1,5 @@
 import * as actions from "./types"
-import { FavoriteCountry } from "../../typescript/types"
+import { FavoriteCountry } from "../../typescript"
 
 export const addFavoriteCountry = (favoriteCountry:FavoriteCountry) => ({
   type: actions.ADD_FAVORITE_COUNTRY,

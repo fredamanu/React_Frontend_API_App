@@ -30,13 +30,13 @@ function loadFromLocalStorage() {
 const middleware = [thunk]
 const store = createStore(
   rootReducer,
-  loadFromLocalStorage(),
+  // loadFromLocalStorage(),
   compose(
     applyMiddleware(...middleware),
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   )
 )
 
-store.subscribe(() => saveToLocalStorage(store.getState()))
+// store.subscribe(() => saveToLocalStorage(store.getState()))
 
 export default store

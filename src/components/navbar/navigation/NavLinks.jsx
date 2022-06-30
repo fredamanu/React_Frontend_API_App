@@ -1,16 +1,16 @@
 import React from "react"
-import CountFavorites from "../countFavorites/CountFavorites"
-import NavHomeIcon from "../homeIcon/NavHomeIcon"
-import MySwitch from "../switch/MySwitch"
+import CountFavorites from "../countFavorites"
+import HomeIcon from "../homeIcon"
+import Switch from "../switch"
 
-import "./navigation.css"
+import "./index.css"
 
 export default function NavLinks() {
   return (
     <div className="navlinks-container">
-      <NavHomeIcon />
+      <HomeIcon />
       <CountFavorites />
-      <MySwitch />
+      <Switch />
     </div>
   )
 }
