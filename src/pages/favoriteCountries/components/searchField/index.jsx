@@ -4,7 +4,7 @@ import { ThemeContext } from "../../../../ThemeContext"
 import SearchBar from "./searchbar"
 import "./index.css"
 
-export default function MainSearchField() {
+export default function SearchField() {
   const { dark } = useContext(ThemeContext)
   return (
     <div className={dark ? "fav-hero-container-dark" : "fav-hero-container"}>

@@ -6,7 +6,7 @@ import CountryFlagCarousel from "./countryFlagCarousel"
 import FunFacts from "./funFacts"
 import "./index.css"
 
-export default function MainCountryCard() {
+export default function CountryCard() {
   const selectedCountry = useSelector((state) => state.selectedCountry.name)
 
   return (

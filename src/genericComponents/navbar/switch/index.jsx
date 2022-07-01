@@ -10,7 +10,7 @@ export default function Switch() {
 
   const handleClick = () => {
     setDark(!dark)
-    localStorage.setItem("dark", !dark)
+    localStorage.setItem("dark", JSON.stringify(!dark))
   }
 
   const toggleOff = (

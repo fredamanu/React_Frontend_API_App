@@ -2,10 +2,10 @@ import React, { useContext, useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
 
-import MainCountryCard from "./components/countryCard"
+import CountryCard from "./components/countryCard"
 import Footer from "../../genericComponents/footer"
 import LoadingIcon from "../../genericComponents/loadingIcon"
-import MainNavBar from "../../genericComponents/navbar"
+import NavBar from "../../genericComponents/navbar"
 import { fetchCountry } from "../../redux/actions/fetchCountry"
 import { getSelectedCountry } from "../../redux/actions/getSelectedCountry"
 import { ThemeContext } from "../../ThemeContext"
@@ -32,8 +32,8 @@ export default function Country() {
         color: dark ? "#fff" : "inherit",
       }}
     >
-      <MainNavBar />
-      {loading ? <LoadingIcon /> : <MainCountryCard />}
+      <NavBar />
+      {loading ? <LoadingIcon /> : <CountryCard />}
       <Footer />
     </div>
   )

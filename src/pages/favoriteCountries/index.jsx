@@ -5,10 +5,10 @@ import Globe from "./components/globe"
 import Heading from "./components/heading"
 import PageInformation from "./components/pageInformation"
 import FavoriteCountriesGrid from "./components/favoriteCountriesGrid"
-import MainSearchField from "./components/searchField"
+import SearchField from "./components/searchField"
 import Footer from "../../genericComponents/footer"
 import { ThemeContext } from "../../ThemeContext"
-import MainNavBar from "../../genericComponents/navbar"
+import NavBar from "../../genericComponents/navbar"
 
 export default function FavoriteCountries() {
   const { dark } = useContext(ThemeContext)
@@ -21,11 +21,11 @@ export default function FavoriteCountries() {
         color: dark ? "#fff" : "inherit",
       }}
     >
-      <MainNavBar />
+      <NavBar />
       <Heading />
       {count > 0 ? (
         <div>
-          <MainSearchField />
+          <SearchField />
           <FavoriteCountriesGrid />
         </div>
       ) : (

@@ -1,10 +1,11 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import { CgMenuRound } from "react-icons/cg"
-
+import { ThemeContext } from "../../../ThemeContext"
 import "./index.css"
 import NavLinks from "./NavLinks"
 
-export default function MobileNavigation({ dark }) {
+export default function MobileNavigation() {
+  const { dark } = useContext(ThemeContext)
   const [open, setOpen] = useState(false)
 
   return (
