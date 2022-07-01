@@ -1,16 +1,16 @@
 import { Routes, Route } from "react-router-dom"
-import HomePage from "./pages/HomePage"
-import CountryPage from "./pages/CountryPage"
-import FavoriteCountriesPage from "./pages/FavoriteCountriesPage"
+import Home from "./pages/home"
+import Country from "./pages/country"
+import FavoriteCountries from "./pages/favoriteCountries"
 
 import "./App.css"
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/country/:id" element={<CountryPage />} />
-      <Route path="/favoritecountries" element={<FavoriteCountriesPage />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/country/:id" element={<Country />} />
+      <Route path="/favoritecountries" element={<FavoriteCountries />} />
     </Routes>
   )
 }
