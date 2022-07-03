@@ -9,10 +9,11 @@ import SearchField from "./components/searchField"
 import Footer from "../../genericComponents/footer"
 import { ThemeContext } from "../../ThemeContext"
 import NavBar from "../../genericComponents/navbar"
+import { State } from "../../typescript"
 
 export default function FavoriteCountries() {
   const { dark } = useContext(ThemeContext)
-  const state = useSelector((state) => state)
+  const state = useSelector((state:State) => state)
   const count = state.favoriteCountries.count
 
   return (

@@ -8,7 +8,7 @@ import CountriesGrid from "./CountriesGrid"
 export default function CountriesPopOver() {
   const [anchorEl, setAnchorEl] = useState(null)
 
-  const handleClick = (event) => {
+  const handleClick = (event: any) => {
     setAnchorEl(event.currentTarget)
   }
 

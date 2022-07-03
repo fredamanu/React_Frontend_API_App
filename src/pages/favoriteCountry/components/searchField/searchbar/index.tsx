@@ -9,10 +9,10 @@ import { ThemeContext } from "../../../../../ThemeContext"
 import "./index.css"
 
 export default function SearchBar() {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch<any>()
   const { dark } = useContext(ThemeContext)
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     dispatch(setSearchTerm(e.target.value))
   }
 

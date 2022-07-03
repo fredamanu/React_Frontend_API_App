@@ -77,9 +77,9 @@ export type State = {
     searchTerm: {
         keyword: string
     },
-    fetchCountryReducer: CountryState,
+    country: CountryState,
     favoriteCountries: FavoriteCountries,
     selectedCountry: {
-        name: "string"
+        name: string
     }
 }

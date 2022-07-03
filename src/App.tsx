@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom"
-import Home from "./pages/home/index.tsx"
+import Home from "./pages/home"
 import Country from "./pages/country"
-import FavoriteCountries from "./pages/favoriteCountry"
+import FavoriteCountries from "./pages/favoriteCountry/index"
 
 function App() {
   return (

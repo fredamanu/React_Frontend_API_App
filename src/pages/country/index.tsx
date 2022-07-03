@@ -9,14 +9,14 @@ import LoadingIcon from "../../genericComponents/loadingIcon"
 import NavBar from "../../genericComponents/navbar"
 import { fetchCountry } from "../../redux/actions/fetchCountry"
 import { ThemeContext } from "../../ThemeContext"
+import { State } from "../../typescript"
 
 export default function Country() {
   const name = useParams()
   const selectedCountry = name.id
   const { dark } = useContext(ThemeContext)
-  const { loading, error } = useSelector((state) => state.country)
-
-  const dispatch = useDispatch()
+  const { loading, error } = useSelector((state: State) => state.country)
+  const dispatch = useDispatch<any>()
 
   useEffect(() => {
     dispatch(fetchCountry(selectedCountry))

@@ -5,22 +5,22 @@ import Grid from "@mui/material/Grid"
 import AddIcon from "@mui/icons-material/Add"
 
 import { addFavoriteCountry } from "../../../../../../redux/actions/favoriteCountries"
-
 import { ThemeContext } from "../../../../../../ThemeContext"
+import { Country, State } from "../../../../../../typescript"
 import "./index.css"
 
 export default function CountriesGrid() {
   const { dark } = React.useContext(ThemeContext)
-  const dispatch = useDispatch()
-  const keyword = useSelector((state) => state.searchTerm.keyword)
-  const state = useSelector((state) => state)
+  const dispatch = useDispatch<any>()
+  const keyword = useSelector((state: State) => state.searchTerm.keyword)
+  const state = useSelector((state: State) => state)
   const countries = state.countries.data
 
   const newCountries = countries.filter((c) => {
     return c.name.common.toLowerCase().includes(keyword.toLowerCase())
   })
 
-  const handleClick = (item) => {
+  const handleClick = (item: Country) => {
     const newName =
       item.name.common.length > 15
         ? item.name.common.slice(0, 15) + "..."

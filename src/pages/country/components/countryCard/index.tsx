@@ -1,5 +1,6 @@
 import React from "react"
 import { useSelector } from "react-redux"
+import { State } from "../../../../typescript"
 
 import CountryButtons from "./countryButtons"
 import CountryFlagCarousel from "./countryFlagCarousel"
@@ -7,7 +8,7 @@ import FunFacts from "./funFacts"
 import "./index.css"
 
 export default function CountryCard() {
-  const selectedCountry = useSelector((state) => state.selectedCountry.name)
+  const selectedCountry = useSelector((state: State) => state.selectedCountry.name)
 
   return (
     <div className="hero-container">

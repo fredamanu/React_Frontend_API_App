@@ -7,14 +7,15 @@ import ClearIcon from "@mui/icons-material/Clear"
 import { removeFavoriteCountry } from "../../../../redux/actions/favoriteCountries"
 import { ThemeContext } from "../../../../ThemeContext"
 import "./index.css"
+import { FavoriteCountry, State } from "../../../../typescript"
 
 export default function FavoriteCountriesGrid() {
   const { dark } = useContext(ThemeContext)
-  const state = useSelector((state) => state)
-  const dispatch = useDispatch()
+  const state = useSelector((state: State) => state)
+  const dispatch = useDispatch<any>()
   const list = state.favoriteCountries.countries
 
-  const handleClick = (item) => {
+  const handleClick = (item: FavoriteCountry) => {
     const obj = {
       name: item.name,
       fullname: item.fullname,

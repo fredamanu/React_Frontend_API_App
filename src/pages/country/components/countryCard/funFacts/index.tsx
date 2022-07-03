@@ -1,10 +1,11 @@
 import React from "react"
 import { useSelector } from "react-redux"
+import { State } from "../../../../../typescript"
 
 import "./index.css"
 
 export default function FunFacts() {
-  const country = useSelector((state) => state.country.data)
+  const country = useSelector((state: State) => state.country.data)
 
   return (
     <div className="fun-facts-container">

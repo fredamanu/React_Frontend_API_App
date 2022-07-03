@@ -16,7 +16,7 @@ export const fetchCountryFailure = (err: string) => ({
   payload: err,
 })
 
-export const fetchCountry = (selectedCountry: string) => {
+export const fetchCountry = (selectedCountry: string | undefined) => {
   return function (dispatch: any) {
     const url = `https://restcountries.com/v3.1/name/${selectedCountry}?fullText=true`
     dispatch(fetchCountryRequest())

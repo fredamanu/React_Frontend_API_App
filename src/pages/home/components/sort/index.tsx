@@ -16,7 +16,7 @@ import "./index.css"
 export default function Sort() {
   const [sort, setSort] = useState("")
   const { dark } = useContext(ThemeContext)
-  const dispatch = useDispatch()
+  const dispatch = useDispatch<any>()
  
 
   const handleChange = (event: any) => {

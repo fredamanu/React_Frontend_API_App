@@ -10,7 +10,7 @@ import "./index.css"
 
 export default function SearchBar() {
   const { dark } = useContext(ThemeContext)
-  const dispatch = useDispatch()
+  const dispatch = useDispatch<any>()
 
   const handleSearch = (e: any) => {
     dispatch(setSearchTerm(e.target.value))

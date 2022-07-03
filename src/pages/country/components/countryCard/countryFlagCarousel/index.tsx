@@ -1,11 +1,12 @@
 import React from "react"
 import Carousel from "react-bootstrap/Carousel"
 import { useSelector } from "react-redux"
+import { State } from "../../../../../typescript"
 
 import "./index.css"
 
 export default function CountryFlagCarousel() {
-  const country = useSelector((state) => state.country.data)
+  const country = useSelector((state: State) => state.country.data)
 
   return (
     <div className="carousel-container">

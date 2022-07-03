@@ -8,11 +8,12 @@ import {
   removeFavoriteCountry,
 } from "../../../../../redux/actions/favoriteCountries"
 import "./index.css"
+import { State } from "../../../../../typescript"
 
 export default function CountryButtons() {
   const dispatch = useDispatch()
   const navigate = useNavigate()
-  const state = useSelector((state) => state)
+  const state = useSelector((state: State) => state)
   const country = state.country.data
   const selectedCountry = state.selectedCountry.name
   const favoriteCountries = state.favoriteCountries.countries

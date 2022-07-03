@@ -2,7 +2,7 @@ import React, { createContext, useState } from "react"
 
 export const ThemeContext = createContext()
 
-export default function ThemeProvider({ children }) {
+const ThemeProvider = ({ children }) => {
   const [dark, setDark] = useState(JSON.parse(localStorage.getItem("dark")))
 
   return (
@@ -11,3 +11,5 @@ export default function ThemeProvider({ children }) {
     </ThemeContext.Provider>
   )
 }
+
+export default ThemeProvider

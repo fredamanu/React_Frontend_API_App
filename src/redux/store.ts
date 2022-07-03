@@ -1,13 +1,14 @@
 import {
   legacy_createStore as createStore,
-  compose,
   applyMiddleware,
 } from "redux"
+import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from "redux-thunk"
+import { State } from "../typescript"
 
 import rootReducer from "./reducers"
 
-function saveToLocalStorage(state) {
+function saveToLocalStorage(state: State) {
   try {
     const serialisedState = JSON.stringify(state)
     localStorage.setItem("persistantState", serialisedState)
@@ -31,9 +32,8 @@ const middleware = [thunk]
 const store = createStore(
   rootReducer,
   loadFromLocalStorage(),
-  compose(
-    applyMiddleware(...middleware),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  composeWithDevTools(
+    applyMiddleware(...middleware)
   )
 )
 
