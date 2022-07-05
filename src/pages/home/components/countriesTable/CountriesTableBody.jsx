@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom"
+import { v4 as uuidv4 } from "uuid"
 import { useDispatch } from "react-redux"
 import TableBody from "@mui/material/TableBody"
 import TableCell from "@mui/material/TableCell"
@@ -42,7 +43,7 @@ export default function CountriesTableBody({ data, page, rowsPerPage, dark }) {
               hover
               role="checkbox"
               tabIndex={-1}
-              key={country.name.common}
+              key={uuidv4()}
               onClick={(event) => handleClick(country.name.common)}
               className="tablebody-row"
             >

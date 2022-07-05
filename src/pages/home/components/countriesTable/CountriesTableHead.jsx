@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from "uuid"
 import TableHead from "@mui/material/TableHead"
 import TableRow from "@mui/material/TableRow"
 import TableCell from "@mui/material/TableCell"
@@ -8,7 +9,7 @@ export default function CountriesTableHead({ columns, dark }) {
       <TableRow>
         {columns.map((column) => (
           <TableCell
-            key={column.id}
+            key={uuidv4()}
             align={column.align}
             style={{
               minWidth: column.minWidth,

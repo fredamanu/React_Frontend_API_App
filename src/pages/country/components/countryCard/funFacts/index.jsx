@@ -1,4 +1,5 @@
 import React from "react"
+import { v4 as uuidv4 } from "uuid"
 import { useSelector } from "react-redux"
 
 import "./index.css"
@@ -16,7 +17,7 @@ export default function FunFacts() {
         const cap = first.toUpperCase()
         const newDay = cap + rest
         return (
-          <div key={property.name.common}>
+          <div key={uuidv4()}>
             <p>
               Official Name:
               <span className="fun-facts">{property.name.official}</span>

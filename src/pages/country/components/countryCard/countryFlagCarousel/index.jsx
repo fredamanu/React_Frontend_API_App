@@ -1,4 +1,5 @@
 import React from "react"
+import { v4 as uuidv4 } from "uuid"
 import Carousel from "react-bootstrap/Carousel"
 import { useSelector } from "react-redux"
 
@@ -12,7 +13,7 @@ export default function CountryFlagCarousel() {
       {country.map((property) => {
         return (
           <Carousel
-            key={property.name.common}
+            key={uuidv4()}
             className="carousel"
             style={{ width: "100%", height: "100%" }}
           >

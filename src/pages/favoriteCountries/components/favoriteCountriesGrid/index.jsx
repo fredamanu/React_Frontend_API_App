@@ -1,4 +1,5 @@
 import React, { useContext } from "react"
+import { v4 as uuidv4 } from "uuid"
 import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import Grid from "@mui/material/Grid"
@@ -39,7 +40,7 @@ export default function FavoriteCountriesGrid() {
         // style={{ width: 700, margin: "auto" }}
       >
         {list.map((item) => (
-          <Grid key={item.fullname} item xs={12} sm={6} md={4}>
+          <Grid key={uuidv4()} item xs={12} sm={6} md={4}>
             <div
               className={
                 dark ? "grid-item-container-dark" : "grid-item-container"
