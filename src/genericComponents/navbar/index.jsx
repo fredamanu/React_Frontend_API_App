@@ -11,7 +11,7 @@ export default function NavBar() {
   return (
     <div className={dark ? "navbar-container-dark" : "navbar-container"}>
       <div className="navflex-container">
-        <h5 className={dark ? "logo-dark" : "logo"}>Count-Trees</h5>
+        <h5 className={dark ? "logo-dark" : "logo"}>CounTrees</h5>
         <MobileNavigation />
         <Navigation />
       </div>
